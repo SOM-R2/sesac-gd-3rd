@@ -1,0 +1,106 @@
+<!-- 
+    ctrl(cmd) + / : 주석
+    주석이란?
+     브라우저에서 보이지 않지만 스스로나 다른 개발자를 위해 작성하는 메모
+ -->
+<!DOCTYPE html>
+<!-- 
+    !DOCTYPE html
+        - html5문서로 작성하겠다는 의미 (html1, 2 , 3, 4마다 의미가 다름)
+        - DOCTYPE : Document type의 약자, 웹 문서가 어떤 형식으로 작성될 것인지 선언
+ -->
+
+ <!-- lang 속성 : language (en : english, ko : korean) -->
+<html lang="ko">
+    <!-- 
+        head 태그 : 내부 정보들이 브라우저에서 직접적으로 보이지 않음
+        스타일 정보, 페이지 정보 등을 담고 있음 
+     -->
+    <head>
+        <!--
+            인코딩 방식 지정 
+            인코딩 : 작성된 코드를 컴퓨터가 이해할 수 있도록 바꿔주는 것 
+            한글이 꺠져나오는 경우 meta 태그 사용해서 인코딩 방식을 utf-8로 지정하기 
+        -->
+        <mata charset="UTF-8" />
+        <!-- title : 문서의 제목 -->
+        <title>문서의 제목</title>
+    </head>
+    <!-- body 태그 : 브라우저에서 보여주고 싶은 내용 작성 -->
+    <!-- start tag(여는 태그), end tag(닫는 태그) 사이에 넣고 싶은 content(내용)을 작성 -->
+    <!-- 태그명 + tab(enter) : 여는 태그/닫는 태그 자동 완성 -->
+    <body>
+        <!-- h1~6 태그 : 제목 태그 (글자를 크고 두껍게 보임) -->
+        <!-- h1태그는 한 html 파일 내에서 하나만 사용 -->
+        <h1>첫 HTML 문서</h1>
+        <h2>첫 HTML 문서</h2>
+        <h3>첫 HTML 문서</h3>
+        <h4>첫 HTML 문서</h4>
+        <h5>첫 HTML 문서</h5>
+        <h6>첫 HTML 문서</h6>
+
+        <p>p 태그 : 본문 테그</p>
+        <!-- br 태그 : 줄바꿈 태그 (html의 content는 줄바꿈이 되지 않음) -->
+
+        <br /><br /><br /><br /><br />        
+        <p>두 번쨰<br />p태그</p>
+        <p>띄어쓰기             테스트</p>
+        <!-- &nbsp : 공백을 만들어주는 문자 -->
+        <p>띄어쓰기&nbsp&nbsp&nbsp&nbsp&nbsp테스트</p>
+        
+        <!-- 중첩(nested) -->
+        <!-- 부모, 자식, 상위, 하위 요소로 태그를 구분함 -->
+        <!-- div : 블록 요소(화면에 꽉참), span : 인라인 요소(텍스트만큼만 차지함) -->
+        <!--
+             파란색 span은 빨간색 div의 자식요소
+            body 태그는 파란색 span의 조상 요소
+            
+            형제 요소 : 같은 depth(level), 즉 같은 부모 태그를 가지고 있는 경우
+            노란색 span은 빨간색 div와 형제
+            
+            빈 태그 br태그의 경우 자식 요소를 가질 수 없음 
+        -->
+        <div style="background-color: red;">
+            파란 span의 parent
+            <span style="background-color: blue;">빨간 div의 child</span>
+        </div>
+        <span style="background-color: yellow;">빨간 div의 sibling</span>
+    </body>
+</html>
+
+<!-- ! + tab(enter) : html 기본 구조 자동 완성  -->
+<!-- <!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제목 작성</title>
+</head>
+<body>
+    
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
