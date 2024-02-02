@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>semantic tag</title>
+    </head>
+    <body>
+        <!-- 시멘틱 웹이란? 
+            의미적으로 컴퓨터가 이해할 수 있도록 구성한 웹페이지
+        -->
+        <!-- 웹 페이지를 만들다보면 중첩을 많이 사용하게 됨 -> 해당 태그의 역할을 알기 어려워질 수 있음-->
+        <!-- 시멘틱 태그를 사용할 경우 해당 태그의 역할을 쉽게 알 수 있음 -->
+        <!-- 유지보수가 쉬워짐 -->
+        <!-- 개발자 입장에서도 시멘틱한 태그를 잘 사용한 웹이 유지보수하기 쉽지만 컴퓨터 입장에서도 해당 요소가 어떤 역할을 하는지 이해할 수 있음 -->
+        <!-- 시멘틱한 태그를 잘 사용한 경우 웹 상에서 검색 엔진 최적화까지 할 수 있음 -->
+
+        <!-- header 태그는 보통 페이지의 가장 상단에 위치  -->
+        <header style="height: 50px; background-color: pink">Header</header>
+        <!-- nav 태그는 header 내부에 위치하거나 aside 내부 또는 aside 대신 사용되기도 함 -->
+        <nav style="height: 20px; background-color: beige">Nav</nav>
+        <!-- main 태그는 하나의 페이지에서 한 번만 사용 되는 것이 좋음   -->
+        <main style="height: 1000px; background-color: skyblue; display: flex">
+            Main
+            <!-- section 안에 article을 넣어도 되고, 반대로 작성해도 됨 -->
+            <!-- 일반적으로는 section 내부에 article 사용하는 경우가 조금 더 많음 -->
+            <!-- 아래 기준 section은 큰 부분을 묶어줄 때 사용, article은 내부의 주된 내용을 포함하는 공간으로 사용됨 -->
+            <section style="width: 80%; background-color: gold">
+                Section
+                <article style="height: 100px; background-color: gray">
+                    Article
+                </article>
+                <article style="height: 100px; background-color: yellowgreen">
+                    Article
+                </article>
+                <article style="height: 100px; background-color: coral">
+                    Article
+                </article>
+                <article style="height: 100px; background-color: royalblue">
+                    Article
+                </article>
+            </section>
+            <!-- 사이드영역 : 오른쪽에 넣을꺼라 section 아래에 aside 넣기, 왼쪽에 넣고싶으면 section위에 넣어야함 -->
+            <!-- aside 태그는 옆에 위치하는 공간을 의미 (광고, 메뉴구성 등 자유롭게 사용) -->
+            <aside style="width: 20%; background-color: blueviolet">
+                Aside
+            </aside>
+        </main>
+
+        <!-- footer 태그는 사이트 최하단에 위치하는 공간 -->
+        <!-- 저작권 정보, 법령, 회사에 대한 정보 등을 담는 공간 태그 -->
+        <footer style="height: 50px; background-color: palegreen">
+            Footer
+        </footer>
+    </body>
+</html>
