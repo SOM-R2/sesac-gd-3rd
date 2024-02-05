@@ -34,6 +34,14 @@
             .box::after {
                 content: " 빨리";
             }
+            .fruits span:first-child {
+                color: red;
+            }
+
+            /* div가 fruits클래스의 첫번째 자식이 아니기 때문에 */
+            .fruits div:first-child {
+                color: red;
+            }
         </style>
     </head>
     <body>
@@ -42,7 +50,7 @@
         <a href="#">코딩온으로 이동</a>
         <input type="text" />
 
-        <hr / >
+        <hr />
 
         <!-- 실습4 가상클래스선택자 -->
         <div class="stripes">
@@ -61,5 +69,13 @@
 
         <!-- 실습 5 가상요소선택자 -->
         <div class="box">여기요!</div>
+
+        <div class="fruits">
+            <span>딸기</span>
+            <span>수박</span>
+            <div>오렌지</div>
+            <p>망고</p>
+            <h3>사과</h3>
+        </div>
     </body>
 </html>
