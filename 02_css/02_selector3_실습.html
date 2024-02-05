@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>선택자 실습3</title>
+        <style>
+            /* 가상클래스선택자 실습 */
+            h1:hover {
+                color: red;
+            }
+            a:active {
+                background-color: blue;
+            }
+            input:focus {
+                background-color: orange;
+            }
+
+            /* 가상 클래스 선택자 실습2 */
+            .stripes > * {
+                background-color: navy;
+                color: white;
+            }
+
+            .stripes > div:nth-child(2n) {
+                background-color: yellow;
+                color: black;
+            }
+
+            /* 요소 선택자 실습  */
+            .box::before {
+                content: "택시 ";
+            }
+            .box::after {
+                content: " 빨리";
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 실습3-가상클래스 선택자 -->
+        <h1>h1태그에 마우스가 올라가면 글자가 빨간색</h1>
+        <a href="#">코딩온으로 이동</a>
+        <input type="text" />
+
+        <hr / >
+
+        <!-- 실습4 가상클래스선택자 -->
+        <div class="stripes">
+            <div>navy</div>
+            <div>yellow</div>
+            <div>navy</div>
+            <div>navy</div>
+            <div>navy</div>
+            <div>yellow</div>
+            <div>navy</div>
+            <div>navy</div>
+            <div>navy</div>
+            <div>yellow</div>
+            <div>navy</div>
+        </div>
+
+        <!-- 실습 5 가상요소선택자 -->
+        <div class="box">여기요!</div>
+    </body>
+</html>

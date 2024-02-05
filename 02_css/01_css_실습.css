@@ -1,0 +1,11 @@
+@import url("./01_css_import_실습.css");
+
+p {
+    background-color: red;
+    color: white;
+}
+
+h3 {
+    background-color: black;
+    color: white;
+}

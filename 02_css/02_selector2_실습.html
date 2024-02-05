@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>복합선택자 실습</title>
+        <style>
+            /* 호랑이 배경 yellow */
+            #tiger {
+                background-color: yellow;
+            }
+            /* 모든 사자 글자 sienna */
+            .lion {
+                color: sienna;
+            }
+            /* 야생의 사자 : 배경 red */
+            p.lion {
+                background-color: red;
+            }
+            /* 사파리 안의 사자 배경 greenyellow */
+
+            /* 내 답: 
+            ul .lion {
+                background-color: greenyellow;
+            } 
+            */
+
+            /* 강사님 답 */
+            .zoo > ul .lion {
+                background-color: greenyellow;
+            }
+
+            /* 동물원 안의 사자 폰트 두껍게 */
+
+            /* 내 답:
+            div .lion {
+                font-weight: 900;
+            }
+            */
+
+            /* 강사님 답 */
+            .zoo .lion {
+                font-weight: 900;
+            }
+            /* 호랑이 뒤의 팬더 배경 skyblue */
+
+            /* 내 답:  
+            ul #tiger + li {
+                background-color: skyblue;
+            }
+            */
+
+            /* 강사님 답 */
+            #tiger + li {
+                background-color: skyblue;
+            }
+
+            /* 사파리 사자 뒤에 있는 모든 사육사 배경 orange */
+
+            /* 내 답:  
+            ul > .lion + li ~ li {
+                background-color: orange;
+            }
+            */
+            /* 강사님 답 */
+            .zoo li.lion ~ li {
+                background-color: orange;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>복합선택자 사용 연습</h1>
+        <p>동물원에 왔어요</p>
+        <div class="zoo">
+            <ul>
+                <span>여긴 사파리!</span>
+                <li>곰</li>
+                <li id="tiger">호랑이</li>
+                <li>팬더</li>
+                <span class="lion">사자1</span>
+                <li class="lion">사자2</li>
+                <li>사육사 layla</li>
+                <li>사육사 레일라</li>
+            </ul>
+            <span class="lion"> 사파리 밖의 사자</span>
+        </div>
+        <p class="lion">야생의 사자</p>
+    </body>
+</html>

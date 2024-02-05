@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSS 복합 선택자</title>
+        <style>
+            header {
+                height: 70px;
+                background-color: aliceblue;
+            }
+
+            section {
+                border: 5px solid pink;
+            }
+
+            article {
+                border: 5px solid gold;
+            }
+
+            /* 자식 선택자 사용해서 h1태그 선택하는 방법 (다른페이지의 header의 css와의 충돌을 방지함)*/
+            header > h1 {
+                color: violet;
+                text-align: center;
+            }
+            h1 {
+                background-color: blue;
+            }
+            .first > h2 {
+                background-color: aqua;
+            }
+            .second > h2 {
+                background-color: midnightblue;
+                color: white;
+            }
+
+            /* 연쇄적으로 길게 나열 가능 -> 선택자가 자세할수록 높은 우선순위를 가짐 */
+            main > .first > article > ul > li {
+                font-size: 10px;
+            }
+
+            /* 위에보다 덜 자세하기 떄문에 적용 X */
+            .first > article > ul > li {
+                font-size: 50px;
+            }
+
+            /* 후손 선택자  => color 속성 우선순위 3등*/
+            .second li {
+                font-size: 50px;
+                background-color: tomato;
+                color: white;
+            }
+
+            /* 복합적으로 자식과 후손 선택자를 섞어서 사용 가능 => color 속성 우선순위 1등 */
+            main .second article ul > li > ul > li {
+                color: black;
+            }
+
+            /* 복합적으로 자식과 후손 선택자를 섞어서 사용 가능 -> 이 경우 상속으로 인해 신데렐라 등장인물 부분도 다 적용됨!
+            단, 위에 더 긴(자세한) 선택자가 있기 때문에 따로따로 적용됨!!(이 부분 우선순위 밀림) => color 속성 우선순위 2등  */
+            main .second article ul > li {
+                color: blue;
+            }
+
+            /* 인접 형제 선택자 */
+            #sunAndMoon + li {
+                font-size: 20px;
+                background-color: aqua;
+            }
+
+            /* 일반 형제 선택자 : 아이디 다음의 li선택자 부터 적용 */
+            #snowWhite ~ li {
+                background-color: bisque;
+            }
+
+            /* 태그에 해당 id나 class를 가지고 있는 특정 요소만 선택 */
+            li#snowWhite {
+                background-color: springgreen;
+            }
+
+            section.second {
+                background-color: yellow;
+            }
+
+            /* 여러 개의 요소 한번 에 스타일 지정 */
+            main section.second ul > li > ul > li,
+            .first article span {
+                border: 5px dotted red;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>복합 선택자 연습</h1>
+        </header>
+        <main>
+            <section class="first">
+                <h2>첫번 째 섹션</h2>
+                <article>
+                    <span>전래동화</span>
+                    <ul>
+                        <li>콩쥐팥쥐</li>
+                        <li id="sunAndMoon">햇님 달님</li>
+                        <li>홍길동전</li>
+                        <li>흥부와 놀부</li>
+                        <li>은혜갚은 까치</li>
+                    </ul>
+                </article>
+            </section>
+            <section class="second">
+                <h2>두 번째 section</h2>
+                <article>
+                    <span>외국 동화</span>
+                    <ul>
+                        <li>
+                            신데렐라
+                            <ul>
+                                <li>계모</li>
+                                <li>신데렐라</li>
+                                <li>왕자</li>
+                            </ul>
+                        </li>
+                        <li id="snowWhite">백설공주</li>
+                        <li>미녀와 야수</li>
+                        <li>라푼젤</li>
+                        <li>알라딘</li>
+                        <li>이상한 나라의 엘리스</li>
+                    </ul>
+                </article>
+            </section>
+        </main>
+    </body>
+</html>

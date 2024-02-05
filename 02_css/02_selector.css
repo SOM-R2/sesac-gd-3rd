@@ -1,0 +1,36 @@
+/* 전체 선택자 */
+* {
+    color: red;
+}
+
+/* 태그 선택자 */
+/* 태그명 {속성: 속성값;} */
+/* 해당 태그가 사용된 모든 요소 선택 */
+li {
+    background-color: aqua;
+}
+
+/* class 선택자 */
+/* html 내에서 해당 class를 가진 요소 선택 */
+/* .클래스명 (속성: 속성값;) */
+.red {
+    background-color: red;
+}
+
+/* id 선택자 */
+/* html 내에서 해당 id를 가진 요소 선택 */
+/* #아이디명 {속성: 속성값;} */
+
+/* li {
+    background-color: cadetblue;
+} */
+
+#red {
+    color: blue;
+}
+/* id와 class 선택자 중에서 id 선택자의 우선순위가 더 높다. */
+#li-orange {
+    color: orange;
+}
+
+/* 우선순위 : 태그 < class < id 선택자 순으로 우선순위를 가진다. */

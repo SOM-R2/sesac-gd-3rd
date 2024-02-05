@@ -1,0 +1,10 @@
+/* import 방식은 css 파일에서 다른 css파일을 불러오는 것 */
+@import url("./02_import.css");
+
+li {
+    color: blueviolet;
+}
+
+/* li {
+    color: blue;
+} */
