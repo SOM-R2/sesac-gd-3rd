@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>글자 관련 CSS 속성</title>
+
+        <!-- 구글 폰트에서 웹 폰트를 사용하기 위해 작성한 link 태그  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400;700&family=Single+Day&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./02_attr2.css" />
+    </head>
+    <body>
+        <h2>구글 폰트 적용</h2>
+        <!-- lorem + enter : 더미 text 필요할때 씀 -->
+        <div class="google">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta,
+            tenetur consequatur! Rerum aperiam corrupti sequi odit ipsa ea vitae
+            maiores dignissimos, officia assumenda! Dolores voluptatibus
+            excepturi in beatae laborum! Quis!
+        </div>
+
+        <h2>눈누 폰트 적용</h2>
+        <!-- lorem + enter : 더미 text 필요할때 씀 -->
+        <div class="noonnu">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta,
+            tenetur consequatur! Rerum aperiam corrupti sequi odit ipsa ea vitae
+            maiores dignissimos, officia assumenda! Dolores voluptatibus
+            excepturi in beatae laborum! Quis!
+        </div>
+
+        <div class="container">
+            <p class="sentence">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+                tempora aperiam ex quaerat doloremque pariatur culpa voluptate
+                suscipit, ipsum numquam, deserunt unde dolorem ab reiciendis
+                iusto consequuntur neque dolores repudiandae?
+            </p>
+        </div>
+        <div class="line-height">aaaaaaaa</div>
+        <div class="line-height">aaaaaaaa</div>
+        <div class="line-height">aaaaaaaa</div>
+
+        <br />
+        <hr />
+        <h2>opacity</h2>
+        <div class="opacity opacity-20">opacity 0.2</div>
+        <div class="opacity opacity-80">opacity 0.8</div>
+        <div class="opacity opacity-1">opacity 1</div>
+        <br />
+        <hr />
+
+        <!-- 요소를 숨기는 방법 -->
+        <div class="square">original</div>
+        <div class="square d-none">d-none</div>
+        <div class="square invisible">invisible</div>
+        <div class="square opacity-0">opacity-0</div>
+        <div class="square">original</div>
+
+        <br />
+        <hr />
+
+        <h2>overflow</h2>
+        <div class="text-container overflow-hidden">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Necessitatibus fugit quo architecto, modi culpa iure sunt porro
+                ea est voluptas deleniti sint nostrum quisquam provident
+                aliquid. Asperiores quidem animi incidunt.
+            </p>
+            <img src="../img/pooh.png" alt="pooh" />
+        </div>
+        <div class="text-container overflow-auto">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Necessitatibus fugit quo architecto, modi culpa iure sunt porro
+                ea est voluptas deleniti sint nostrum quisquam provident
+                aliquid. Asperiores quidem animi incidunt.
+            </p>
+            <img src="../img/pooh.png" alt="pooh" />
+        </div>
+        <div class="text-container overflow-scroll">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Necessitatibus fugit quo architecto, modi culpa iure sunt porro
+                ea est voluptas deleniti sint nostrum quisquam provident
+                aliquid. Asperiores quidem animi incidunt.
+            </p>
+            <img src="../img/pooh.png" alt="pooh" />
+        </div>
+        <div class="text-container overflow-visible">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Necessitatibus fugit quo architecto, modi culpa iure sunt porro
+                ea est voluptas deleniti sint nostrum quisquam provident
+                aliquid. Asperiores quidem animi incidunt.
+            </p>
+            <img src="../img/pooh.png" alt="pooh" />
+        </div>
+    </body>
+</html>

@@ -120,13 +120,33 @@
             .div2::after {
                 content: "여기는 after 속성";
             }
+
+            .content article {
+                height: 500px;
+                border: 5px solid blue;
+            }
         </style>
     </head>
     <body>
+        <section>
+            <a href="#detail">상세정보</a>
+            <a href="#review">후기</a>
+            <a href="#comunity">커뮤니티</a>
+        </section>
+        <section class="content">
+            <article id="detail">여기는 상세정보 내용</article>
+            <article id="review">여기는 후기 내용</article>
+            <article id="comunity">여기는 커뮤니티 내용</article>
+        </section>
+
+        <br /><br /><br />
+        <hr />
+
         <div class="div1">
             <span>div1</span>
         </div>
 
+        <!-- 해당부분 색 바뀌는거 관련해서 여쭤보기 원래 어떤식으로 많이 사용하는지..!  -->
         <input type="text" />
         <div class="links">
             <a href="https://www.naver.com" target="_blank">네이버</a>

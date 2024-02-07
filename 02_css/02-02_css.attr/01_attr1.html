@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>css 속성 1</title>
+        <!-- 
+            고딕 a1 폰트 연결 할 링크 + css 따로 작성해줘야함
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400;700&display=swap"
+            rel="stylesheet"
+        /> 
+        -->
+        <link rel="stylesheet" href="./01_attr1.css" />
+    </head>
+    <body>
+        <h2>크기 단위</h2>
+
+        <div class="px">100px</div>
+
+        <p>스타일 em에 폰트 사이즈 2em 으로 변경 시</p>
+        <div class="em-text">
+            em -> 32px
+            <div class="em-text">
+                -> 1em은 32px이 됨 em -> 64px
+                <div class="em-text">em -> 128px이 됨</div>
+            </div>
+        </div>
+
+        <br />
+
+        <p>
+            위에 처럼 스타일 em에 폰트 사이즈 2em으로 변경 한 후 두번째 em-text
+            위의 부모요소 div 추가해서 부모 div에는 인라인으로 폰트사이즈를
+            16px로 변경하면 아래처럼 부모요소에 의해 폰트사이즈들이 엉망으로 됨
+        </p>
+        <div class="em-text">
+            em -> 32px
+            <div style="font-size: 16px">
+                추가적으로 inline으로 스타일 font-size : 16px로 수정함->
+                수정을하면 부모요소가 바껴서 또 달라짐
+                <div class="em-text">
+                    -> 1em은 32px이 됨 em -> 64px
+                    <div class="em-text">em -> 128px이 됨</div>
+                </div>
+            </div>
+        </div>
+
+        <p>rem 예시</p>
+        <div class="rem-text">
+            rem
+            <div class="rem-text">
+                rem
+                <div class="rem-text">rem</div>
+            </div>
+        </div>
+
+        <div class="em">10em</div>
+        <div class="em-parents">
+            em 부모 요소 font-size: 10px
+            <div class="em">10em</div>
+        </div>
+
+        <div class="rem">10rem</div>
+        <div class="rem-parents">
+            rem 부모 요소 font-size: 30px
+            <div class="rem">10rem</div>
+        </div>
+
+        <br />
+
+        <p>% 예시</p>
+        <div class="percent-parents">
+            % 부모 요소 300px
+            <div class="percent">50%</div>
+        </div>
+
+        <div class="vh">30vh</div>
+        <div class="vw">30vw</div>
+
+        <hr />
+        <h2>dispaly 속성</h2>
+        <div class="d-block">block 1</div>
+        <div class="d-block">block 2</div>
+        <div class="d-block">block 3</div>
+        <div class="d-block">block 4</div>
+
+        <br />
+        <br />
+        <span class="d-inline">inline 1</span>
+        <span class="d-inline">inline 2</span>
+        <span class="d-inline">inline 3</span>
+        <span class="d-inline">inline 4</span>
+
+        <br />
+        <br />
+        <span class="d-inline-block">inline-block 1</span>
+        <span class="d-inline-block">inline-block 2</span>
+        <span class="d-inline-block">inline-block 3</span>
+        <span class="d-inline-block">inline-block 4</span>
+
+        <br /><br />
+        <br />
+        <hr />
+
+        <!-- inline 요소 자식으로 block 요소 들어갈 경우 레이아웃 깨짐 사용 X -->
+        <span style="border: 5px solid black"
+            >span
+            <div style="background-color: gray">div</div></span
+        >
+
+        <!-- 실습 박스 모델 사용하기 -->
+
+        <h3>박스 모델 사용하기 실습</h3>
+
+        <!-- 강사님 답 -->
+        <div class="container">
+            <div class="html">html</div>
+            <div class="css">css</div>
+            <div class="javascript">javascript</div>
+        </div>
+
+        <!-- 
+            내 답        
+            <div class="container">
+            <span class="html">html</span>
+            <span class="css">css</span>
+            <span class="javascript">javascript</span>
+            </div>
+         -->
+
+        <br />
+        <hr />
+
+        <h2>max-width, min-width</h2>
+        <div class="parent">
+            <div class="min"></div>
+            <div class="max"></div>
+        </div>
+        <br />
+
+        <header class="header"></header>
+        <!-- calc : 연산의 약자 -->
+        <div class="calc">calc() 사용하기</div>
+
+        <br />
+        <hr />
+        <h2>border, border-radius</h2>
+        <div class="square border">border</div>
+        <button class="square rounded">rounded</button>
+
+        <br />
+        <hr />
+        <div class="box-sizing content-box">content-box</div>
+        <div class="box-sizing border-box">border-box</div>
+    </body>
+</html>

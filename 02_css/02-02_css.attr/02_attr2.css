@@ -1,0 +1,140 @@
+/* sans-serif는 꼭 넣는 습관 가지기!(폰트가 적용이 안될때, 적용될 대체 기본 폰트) */
+/* 구글 폰트 : link 태그, font-family를 사용해 웹 폰트 적용 */
+.google {
+    font-family: "Single Day", "Gothic A1", sans-serif;
+}
+
+/* 눈누 폰트 : @font-face, font-family를 사용해 웹 폰트 적용 */
+@font-face {
+    font-family: "seolleimcool-SemiBold";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/seolleimcool-SemiBold.woff2")
+        format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.noonnu {
+    font-family: "seolleimcool-SemiBold", sans-serif;
+}
+
+/* 모든 폰트의 지정 -> *(전체 선택자) 사용 */
+/* 
+예시 )
+* {
+     font-family: "Single Day", "Gothic A1", sans-serif;
+}
+*/
+
+.sentence {
+    /* 글꼴마다 제공되는 weight(두께)가 있음,  제공이 안되는 글꼴에는 해당 속성이 적용이 안됨 */
+    font-weight: 700;
+    /* 글씨체마다 제공되는 font-weight 값이 모두 제각각이기 때문에 모든 값이 적용되는 것은 아님(가져올때 글꼴 굵기를 선택해서 가져와야함) */
+
+    font-size: 1rem;
+
+    text-align: center;
+
+    /* 취소선 */
+    text-decoration: line-through;
+    /* 밑줄 */
+    text-decoration: underline;
+
+    /* 줄 간 간격 조정, 대체로 배수를 나타내는 단위가 없는 것을 사용(=1을 씀) / 1과 100%는 같은 값 */
+    line-height: 1;
+    line-height: 100%;
+}
+
+.line-height {
+    /* px값 지정 시 한줄의 높이가 해당 px로 지정되고, 세로 가운데 정렬 */
+    /* 한 줄 이 있을 때 (블록태그=div) 세로 가운데 정렬로 사용 */
+    line-height: 50px;
+    color: violet;
+}
+
+/* opacity : 투명도 (0~1 사이의 소수점 숫자 작성)
+    컨텐트 모두의 투명도가 들어감(컨텐트에 text가 있다면 text도 같이 투명해짐)
+*/
+
+/* 선택된 요소의 컨텐트를 모두 투명도 적용시킴 -> 글자도 적용됨 */
+/* background-color: rgba() 속성을 통해 투명한 배경색을 지정하는 것과 다름 */
+
+.opacity {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
+
+.opacity-20 {
+    opacity: 0.2;
+}
+
+.opacity-80 {
+    opacity: 0.8;
+}
+.opacity-1 {
+    /* 완전 불투명 */
+    opacity: 1;
+}
+
+/* 요소를 숨기는 방법 */
+.square {
+    width: 100px;
+    height: 100px;
+    border: 1px solid;
+    display: inline-block;
+}
+.d-none {
+    /* 적응형에서 주로 사용, 모바일과 웹이 헤더 모양이 다를 때 사용(어느순간에는 보이고, 어느 순간에는 보일때, 자리차지 없이 있다 없었다 할 수 있음)  */
+    /* display: none; */
+    background-color: red;
+}
+/* 아래는 잘 사용하지 않음 */
+.invisible {
+    /* 자리는 남아 있어야 할때 사용(자리 차지) 다만, 요소를 선택할 순 없음(요소는 없음) */
+    /* visibility: hidden; */
+    background-color: orangered;
+}
+/* 아래는 잘 사용하지 않음 */
+.opacity-0 {
+    /* 요소는 있지만 투명도로 조절 */
+    /* opacity: 0; */
+    background-color: tomato;
+}
+
+/* overflow : content가 해당 요소를 넘쳤을 떄의 처리 지정*/
+.text-container {
+    width: 70vw;
+    height: 300px;
+    /* 너비를 지정하게 되면 text는 알아서 줄바꿈이 됨 */
+    border: 5px solid black;
+}
+
+.overflow-hidden {
+    /* 이미지는 너비 지정하면 숨겨짐 */
+    overflow: hidden;
+}
+
+/* auto와 scroll의 차이 */
+/* auto는 content가 해당 요소의 크기를 넘치지 않으면 스크롤 생기지 않음 */
+.overflow-auto {
+    /* 이미지에 대한 스크롤이 생김 (넘쳤을때만 스크롤이 생김 -> 이미지 주석처리하면 스크롤바 없어짐) */
+    overflow: auto;
+}
+
+/* scroll은 content가 해당 요소의 크기를 넘치지 않아도 스크롤라인이 생김 */
+.overflow-scroll {
+    /* 이미지에 대한 스크롤이 생김(넘치지 않아도 스크롤이 생김 -> 이미지 주석처리해도 스크롤바 있음) */
+    overflow: scroll;
+}
+
+.overflow-visible {
+    /* 기본값 넘치는 속성들은 상자 밖으로 보여줌 */
+    overflow: visible;
+
+    /* x,y 축에만 따로 지정하는 속성  */
+    overflow-x: hidden;
+    overflow: auto;
+
+    /* 단축속성 */
+    overflow: hidden auto;
+}

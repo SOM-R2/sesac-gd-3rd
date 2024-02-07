@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>속성 선택자 실습</title>
+        <style>
+            input {
+                /* !important 작성 시 해당 스타일링이 무조건적으로 반영(우선순위가 가장 높기 때문) */
+                /* 웬만해서는 사용 X */
+                background-color: pink !important;
+            }
+            [disabled] {
+                background-color: red;
+            }
+            [placeholder="이름"] {
+                background-color: orange;
+            }
+            /* palaceholder 속성을 가지지 않는 태그 선택 */
+
+            /* 
+            내 답
+            [value] {
+                background-color: blue;}
+                
+            */
+
+            /* 강사님 답  */
+            input:not([placeholder]) {
+                background-color: blue;
+            }
+
+            form {
+                width: 400px;
+            }
+            /* hover */
+
+            /* focus */
+            textarea {
+                width: 100%;
+            }
+            /* checked */
+
+            /* active */
+            button {
+                float: right;
+                padding: 5px 15px;
+                background-color: #f96666;
+                color: white;
+                font-size: 17px;
+                border-radius: 10px;
+                border: none;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="text" placeholder="이름" />
+        <input type="password" value="pw" />
+        <input type="text" value="000-0000-0000" />
+        <input type="text" placeholder="핸드폰" />
+        <input type="text" placeholder="주민번호" disabled />
+
+        <br />
+        <br />
+        <br />
+
+        <hr />
+
+        <!-- 선택자 종합 실습! 과제... -->
+        <h3>건의 사항을 적어주세요!</h3>
+        <form>
+            label - 명시적 방식: id와 for 맞추기 - 암시적 방식: label 내부에
+            input 작성 - checkbox 사용 시 명시적 방식으로 작성
+            <!-- 아이콘 호출 단축키 : window + .  -->
+            <button>제출</button>
+        </form>
+    </body>
+</html>
