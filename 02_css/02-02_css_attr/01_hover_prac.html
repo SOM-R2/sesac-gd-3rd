@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>요소 사라지게 하기</title>
+    </head>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+        div:hover {
+            display: none; /* 그냥 없애 버림*/
+            /* opacity: 0;  투명도 0, 요소는 그대로 있음 */
+            /* visibility: hidden; 자리는 그대로 남아 있음 */
+        }
+    </style>
+    <body>
+        <div>해당 요소에 마우스가 올라가면 요소가 사라짐</div>
+    </body>
+</html>
