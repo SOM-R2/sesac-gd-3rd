@@ -6,6 +6,8 @@ body {
     justify-content: flex-start;
     align-items: center;
     display: inline-flex;
+    font-family: "Noto Sans KR", sans-serif;
+    color: black;
 }
 
 .HeaderCategoryHover {
@@ -57,4 +59,88 @@ header button img {
 .prodcut-Image {
     width: 600px;
     height: 968px;
+}
+
+.bi-heart {
+    font-size: 80px;
+    color: #1f0e81;
+}
+.Unlike-btn {
+    border-style: none;
+    background-color: white;
+}
+.unlike {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.EssentialPaddedParkaInkBlack {
+    /* width: 758px; 너비를 지정하면 ... 효과 줄 수 있음*/
+    text-align: center;
+    color: black;
+    font-size: 48px;
+    /* 글꼴 두께를 500으로 설정 */
+    font-weight: 500;
+    /* 한 줄에 텍스트가 표시되도록 설정 */
+    white-space: nowrap;
+    /* 텍스트가 컨테이너를 벗어날 경우 생략 부호로 대체 */
+    overflow: hidden;
+    /* 생략 부호 대체 효과 적용 */
+    text-overflow: ellipsis;
+}
+
+.product-explain {
+    font-size: 12px;
+    font-weight: 400;
+    /* 단어가 너무 길어서 화면 밖으로 나갈 경우 줄 바꿈 처리 */
+    word-wrap: break-word;
+}
+
+.ProductInfo {
+    /* flex-direction: column;은 플렉스 아이템들이 세로로 쌓이도록 배치하는 것 */
+    flex-direction: column;
+    gap: 16px;
+    display: flex;
+}
+
+.Price span {
+    align-self: stretch;
+    display: inline-flex;
+    font-size: 20px;
+    font-weight: 400;
+    word-wrap: break-word;
+    margin-right: 32px;
+}
+#cost-price {
+    color: #968f8f;
+    text-decoration: line-through;
+    margin-right: 8px;
+}
+
+.Color {
+    align-self: stretch;
+    gap: 36px;
+    display: inline-flex;
+    font-size: 20px;
+}
+
+input[type="radio"] {
+    /* 라디오 버튼의 크기 조정 */
+    /* width: 24px;
+    height: 24px; */
+    /* 라디오 버튼의 외관을 원으로 변경 */
+    /* border-radius: 50%; */
+    /* 라디오 버튼의 배경색 설정 */
+    /* background-color: black; */
+    /* 라디오 버튼의 체크된 상태를 표시할 색상 */
+    display: none;
+}
+
+.color-select-btn {
+    width: 24px;
+    height: 24px;
+}
+
+.BtnsColor {
+    gap: 8px;
 }

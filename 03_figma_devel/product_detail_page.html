@@ -4,6 +4,12 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>제품 상세 페이지</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap"
+            rel="stylesheet"
+        />
         <link rel="stylesheet" href="./product_detail_page.css" />
         <link
             rel="stylesheet"
@@ -19,545 +25,305 @@
             <button class="IconBest">
                 <img src="./img/icon_best.svg" alt="best" />
             </button>
-            <button class="Icontemp"><img src="./img/icon_temp.svg" alt="temp"></button>
-            <button class="Iconlogo"><img src="./img/img_logo.svg" alt="logo"  id="logo"></button>
+            <button class="Icontemp">
+                <img src="./img/icon_temp.svg" alt="temp" />
+            </button>
+            <button class="Iconlogo">
+                <img src="./img/img_logo.svg" alt="logo" id="logo" />
+            </button>
             <button class="Iconlogin"><i class="bi bi-person-fill"></i></button>
-            <button class="Iconmypage"><i class="bi bi-person-lines-fill"></i></button>
+            <button class="Iconmypage">
+                <i class="bi bi-person-lines-fill"></i>
+            </button>
             <button class="Iconmypage"><i class="bi bi-cart4"></i></button>
             <button class="Iconmypage"><i class="bi bi-search"></i></button>
         </header>
-        </div>
-        <section
-            class="ProductSection">
-            <!-- <div
-                class="Frame1317"
-                style="
-                    flex: 1 1 0;
-                    height: 606px;
-                    justify-content: center;
-                    align-items: center;
-                    display: flex;
-                "
-            > -->
-                <!-- <div
-                    style="
-                        width: 603.5px;
-                        justify-content: center;
-                        align-items: center;
-                        gap: 8px;
-                        display: flex;
-                    "
-                > -->
-                    <img
-                        class="product-Image"
-                        src="./img/product_image 70.svg" alt="Essential Padded Parka, Ink Black 이미지"
-                    />
-                <!-- </div> -->
-                <article class="product-purchase-info"
-                >
+        <section class="ProductSection">
+            <img
+                class="product-Image"
+                src="./img/product_image 70.svg"
+                alt="Essential Padded Parka, Ink Black 이미지"
+            />
+            <article class="product-purchase-info">
+                <div class="EssentialPaddedParkaInkBlack">
+                    Essential Padded Parka, Ink Black
+                </div>
+                <div class="product-explain">
+                    가장 기본이 되는 싱글 브레스티드 코트
+                </div>
+                <div class="unlike">
+                    <button class="Unlike-btn">
+                        <i class="bi bi-heart"></i>
+                    </button>
+                </div>
+                <div class="ProductInfo">
+                    <div class="Price">
+                        <span>가격 </span><span id="cost-price">₩400,000</span
+                        ><span> ₩320,000</span>
+                    </div>
+                    <div class="Color">
+                        색상
+                        <div class="BtnsColor">
+                            <input type="radio" name="color" id="black" />
+                            <label for="black"
+                                ><img
+                                    src="./img/color_black.svg"
+                                    alt="black color"
+                                    class="color-select-btn"
+                            /></label>
+                            <input type="radio" name="color" id="navy" />
+                            <label for="navy"
+                                ><img
+                                    src="./img/color_navy.svg"
+                                    alt="navy color"
+                                    class="color-select-btn"
+                            /></label>
+                        </div>
+                    </div>
                     <div
-                        class="Frame671"
+                        class="Size"
                         style="
-                            height: 284px;
-                            flex-direction: column;
-                            justify-content: center;
+                            align-self: stretch;
+                            justify-content: flex-start;
                             align-items: center;
-                            display: flex;
+                            gap: 19px;
+                            display: inline-flex;
                         "
                     >
                         <div
-                            class="Frame669"
                             style="
-                                align-self: stretch;
-                                height: 165px;
-                                padding-left: 25px;
-                                padding-right: 25px;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
+                                text-align: center;
+                                color: black;
+                                font-size: 20px;
+                                font-family: Noto Sans KR;
+                                font-weight: 400;
+                                word-wrap: break-word;
+                            "
+                        >
+                            사이즈
+                        </div>
+                        <div
+                            class="BtnsSize"
+                            style="
+                                justify-content: flex-start;
+                                align-items: flex-start;
                                 gap: 8px;
                                 display: flex;
                             "
                         >
                             <div
-                                class="Frame662"
+                                class="BtnSize1False"
                                 style="
-                                    align-self: stretch;
-                                    height: 87px;
+                                    width: 24px;
+                                    height: 24px;
+                                    padding: 8px;
+                                    border: 0.5px #968f8f solid;
                                     flex-direction: column;
                                     justify-content: center;
                                     align-items: center;
-                                    display: flex;
-                                "
-                            >
-                                <div
-                                    class="EssentialPaddedParkaInkBlack"
-                                    style="
-                                        align-self: stretch;
-                                        text-align: center;
-                                        color: black;
-                                        font-size: 48px;
-                                        font-family: Noto Sans KR;
-                                        font-weight: 500;
-                                        word-wrap: break-word;
-                                    "
-                                >
-                                    Essential Padded Parka, Ink Black
-                                </div>
-                                <div
-                                    style="
-                                        align-self: stretch;
-                                        height: 17px;
-                                        color: #968f8f;
-                                        font-size: 12px;
-                                        font-family: Noto Sans KR;
-                                        font-weight: 400;
-                                        word-wrap: break-word;
-                                    "
-                                >
-                                    가장 기본이 되는 싱글 브레스티드 코트
-                                </div>
-                            </div>
-                            <div
-                                class="Frame670"
-                                style="
-                                    align-self: stretch;
-                                    justify-content: flex-end;
-                                    align-items: center;
+                                    gap: 8px;
                                     display: inline-flex;
                                 "
                             >
                                 <div
                                     style="
-                                        width: 70px;
-                                        height: 70px;
-                                        justify-content: center;
-                                        align-items: center;
-                                        display: flex;
+                                        width: 24px;
+                                        height: 24px;
+                                        text-align: center;
+                                        color: #968f8f;
+                                        font-size: 20px;
+                                        font-family: Noto Sans KR;
+                                        font-weight: 400;
+                                        word-wrap: break-word;
                                     "
                                 >
-                                    <div
-                                        class="IconUnlike"
-                                        style="
-                                            width: 70px;
-                                            height: 70px;
-                                            justify-content: center;
-                                            align-items: center;
-                                            display: inline-flex;
-                                        "
-                                    >
-                                        <img
-                                            class="Image83"
-                                            style="width: 70px; height: 70px"
-                                            src="https://via.placeholder.com/70x70"
-                                        />
-                                    </div>
+                                    1
+                                </div>
+                            </div>
+                            <div
+                                class="BtnSize2False"
+                                style="
+                                    width: 24px;
+                                    height: 24px;
+                                    padding: 8px;
+                                    border: 0.5px #968f8f solid;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-items: center;
+                                    gap: 8px;
+                                    display: inline-flex;
+                                "
+                            >
+                                <div
+                                    style="
+                                        width: 24px;
+                                        height: 24px;
+                                        text-align: center;
+                                        color: #968f8f;
+                                        font-size: 20px;
+                                        font-family: Noto Sans KR;
+                                        font-weight: 400;
+                                        word-wrap: break-word;
+                                    "
+                                >
+                                    2
+                                </div>
+                            </div>
+                            <div
+                                class="BtnSize3False"
+                                style="
+                                    width: 24px;
+                                    height: 24px;
+                                    padding: 8px;
+                                    border: 0.5px #968f8f solid;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-items: center;
+                                    gap: 8px;
+                                    display: inline-flex;
+                                "
+                            >
+                                <div
+                                    style="
+                                        width: 24px;
+                                        height: 24px;
+                                        text-align: center;
+                                        color: #968f8f;
+                                        font-size: 20px;
+                                        font-family: Noto Sans KR;
+                                        font-weight: 400;
+                                        word-wrap: break-word;
+                                    "
+                                >
+                                    3
+                                </div>
+                            </div>
+                            <div
+                                class="BtnSize4False"
+                                style="
+                                    width: 24px;
+                                    height: 24px;
+                                    padding: 8px;
+                                    border: 0.5px #968f8f solid;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-items: center;
+                                    gap: 8px;
+                                    display: inline-flex;
+                                "
+                            >
+                                <div
+                                    style="
+                                        width: 24px;
+                                        height: 24px;
+                                        text-align: center;
+                                        color: #968f8f;
+                                        font-size: 20px;
+                                        font-family: Noto Sans KR;
+                                        font-weight: 400;
+                                        word-wrap: break-word;
+                                    "
+                                >
+                                    4
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div
+                    class="Frame673"
+                    style="
+                        width: 603.5px;
+                        padding-left: 24px;
+                        padding-right: 24px;
+                        justify-content: center;
+                        align-items: center;
+                        display: inline-flex;
+                    "
+                >
+                    <div
+                        class="Frame672"
+                        style="
+                            flex: 1 1 0;
+                            height: 49px;
+                            justify-content: flex-start;
+                            align-items: center;
+                            gap: 16px;
+                            display: flex;
+                        "
+                    >
                         <div
-                            class="ProductInfo"
+                            class="Btns"
                             style="
-                                align-self: stretch;
-                                height: 119px;
-                                padding-left: 23px;
-                                padding-right: 23px;
-                                flex-direction: column;
+                                padding-left: 30px;
+                                padding-right: 30px;
+                                padding-top: 10px;
+                                padding-bottom: 10px;
+                                border-radius: 10px;
+                                border: 1px #1f0e81 solid;
                                 justify-content: center;
                                 align-items: center;
-                                gap: 16px;
+                                gap: 6px;
                                 display: flex;
                             "
                         >
                             <div
-                                class="Price"
                                 style="
-                                    align-self: stretch;
-                                    justify-content: flex-start;
-                                    align-items: flex-start;
-                                    gap: 38px;
-                                    display: inline-flex;
+                                    color: #1f0e81;
+                                    font-size: 20px;
+                                    font-family: Noto Sans KR;
+                                    font-weight: 400;
+                                    word-wrap: break-word;
                                 "
                             >
-                                <div
-                                    class="400000320000"
-                                    style="text-align: center"
-                                >
-                                    <span
-                                        style="
-                                            color: black;
-                                            font-size: 20px;
-                                            font-family: Noto Sans KR;
-                                            font-weight: 400;
-                                            word-wrap: break-word;
-                                        "
-                                        >가격 </span
-                                    ><span
-                                        style="
-                                            color: #968f8f;
-                                            font-size: 20px;
-                                            font-family: Noto Sans KR;
-                                            font-weight: 400;
-                                            text-decoration: line-through;
-                                            word-wrap: break-word;
-                                        "
-                                        >₩400,000</span
-                                    ><span
-                                        style="
-                                            color: black;
-                                            font-size: 20px;
-                                            font-family: Noto Sans KR;
-                                            font-weight: 400;
-                                            word-wrap: break-word;
-                                        "
-                                    >
-                                        ₩320,000</span
-                                    >
-                                </div>
+                                장바구니
                             </div>
+                        </div>
+                        <div
+                            class="Btns"
+                            style="
+                                padding-left: 30px;
+                                padding-right: 30px;
+                                padding-top: 10px;
+                                padding-bottom: 10px;
+                                background: #1f0e81;
+                                border-radius: 10px;
+                                justify-content: center;
+                                align-items: center;
+                                gap: 6px;
+                                display: flex;
+                            "
+                        >
                             <div
-                                class="Color"
                                 style="
-                                    align-self: stretch;
-                                    justify-content: flex-start;
-                                    align-items: center;
-                                    gap: 37px;
-                                    display: inline-flex;
+                                    color: white;
+                                    font-size: 20px;
+                                    font-family: Noto Sans KR;
+                                    font-weight: 400;
+                                    word-wrap: break-word;
                                 "
                             >
-                                <div
-                                    style="
-                                        text-align: center;
-                                        color: black;
-                                        font-size: 20px;
-                                        font-family: Noto Sans KR;
-                                        font-weight: 400;
-                                        word-wrap: break-word;
-                                    "
-                                >
-                                    색상
-                                </div>
-                                <div
-                                    class="BtnsColor"
-                                    style="
-                                        justify-content: flex-start;
-                                        align-items: center;
-                                        gap: 7px;
-                                        display: flex;
-                                    "
-                                >
-                                    <div
-                                        style="
-                                            width: 24px;
-                                            height: 24px;
-                                            position: relative;
-                                        "
-                                    >
-                                        <div
-                                            class="Ellipse30"
-                                            style="
-                                                width: 20px;
-                                                height: 20px;
-                                                left: 2px;
-                                                top: 2px;
-                                                position: absolute;
-                                                border-radius: 9999px;
-                                                border: 0.5px #968f8f solid;
-                                            "
-                                        ></div>
-                                        <div
-                                            class="Ellipse31"
-                                            style="
-                                                width: 16px;
-                                                height: 16px;
-                                                left: 4px;
-                                                top: 4px;
-                                                position: absolute;
-                                                background: #262521;
-                                                border-radius: 9999px;
-                                            "
-                                        ></div>
-                                    </div>
-                                    <div
-                                        style="
-                                            width: 24px;
-                                            height: 24px;
-                                            position: relative;
-                                        "
-                                    >
-                                        <div
-                                            class="Ellipse30"
-                                            style="
-                                                width: 20px;
-                                                height: 20px;
-                                                left: 2px;
-                                                top: 2px;
-                                                position: absolute;
-                                                border-radius: 9999px;
-                                                border: 0.5px #968f8f solid;
-                                            "
-                                        ></div>
-                                        <div
-                                            class="Ellipse31"
-                                            style="
-                                                width: 16px;
-                                                height: 16px;
-                                                left: 4px;
-                                                top: 4px;
-                                                position: absolute;
-                                                background: #0c0250;
-                                                border-radius: 9999px;
-                                            "
-                                        ></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                class="Size"
-                                style="
-                                    align-self: stretch;
-                                    justify-content: flex-start;
-                                    align-items: center;
-                                    gap: 19px;
-                                    display: inline-flex;
-                                "
-                            >
-                                <div
-                                    style="
-                                        text-align: center;
-                                        color: black;
-                                        font-size: 20px;
-                                        font-family: Noto Sans KR;
-                                        font-weight: 400;
-                                        word-wrap: break-word;
-                                    "
-                                >
-                                    사이즈
-                                </div>
-                                <div
-                                    class="BtnsSize"
-                                    style="
-                                        justify-content: flex-start;
-                                        align-items: flex-start;
-                                        gap: 8px;
-                                        display: flex;
-                                    "
-                                >
-                                    <div
-                                        class="BtnSize1False"
-                                        style="
-                                            width: 24px;
-                                            height: 24px;
-                                            padding: 8px;
-                                            border: 0.5px #968f8f solid;
-                                            flex-direction: column;
-                                            justify-content: center;
-                                            align-items: center;
-                                            gap: 8px;
-                                            display: inline-flex;
-                                        "
-                                    >
-                                        <div
-                                            style="
-                                                width: 24px;
-                                                height: 24px;
-                                                text-align: center;
-                                                color: #968f8f;
-                                                font-size: 20px;
-                                                font-family: Noto Sans KR;
-                                                font-weight: 400;
-                                                word-wrap: break-word;
-                                            "
-                                        >
-                                            1
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="BtnSize2False"
-                                        style="
-                                            width: 24px;
-                                            height: 24px;
-                                            padding: 8px;
-                                            border: 0.5px #968f8f solid;
-                                            flex-direction: column;
-                                            justify-content: center;
-                                            align-items: center;
-                                            gap: 8px;
-                                            display: inline-flex;
-                                        "
-                                    >
-                                        <div
-                                            style="
-                                                width: 24px;
-                                                height: 24px;
-                                                text-align: center;
-                                                color: #968f8f;
-                                                font-size: 20px;
-                                                font-family: Noto Sans KR;
-                                                font-weight: 400;
-                                                word-wrap: break-word;
-                                            "
-                                        >
-                                            2
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="BtnSize3False"
-                                        style="
-                                            width: 24px;
-                                            height: 24px;
-                                            padding: 8px;
-                                            border: 0.5px #968f8f solid;
-                                            flex-direction: column;
-                                            justify-content: center;
-                                            align-items: center;
-                                            gap: 8px;
-                                            display: inline-flex;
-                                        "
-                                    >
-                                        <div
-                                            style="
-                                                width: 24px;
-                                                height: 24px;
-                                                text-align: center;
-                                                color: #968f8f;
-                                                font-size: 20px;
-                                                font-family: Noto Sans KR;
-                                                font-weight: 400;
-                                                word-wrap: break-word;
-                                            "
-                                        >
-                                            3
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="BtnSize4False"
-                                        style="
-                                            width: 24px;
-                                            height: 24px;
-                                            padding: 8px;
-                                            border: 0.5px #968f8f solid;
-                                            flex-direction: column;
-                                            justify-content: center;
-                                            align-items: center;
-                                            gap: 8px;
-                                            display: inline-flex;
-                                        "
-                                    >
-                                        <div
-                                            style="
-                                                width: 24px;
-                                                height: 24px;
-                                                text-align: center;
-                                                color: #968f8f;
-                                                font-size: 20px;
-                                                font-family: Noto Sans KR;
-                                                font-weight: 400;
-                                                word-wrap: break-word;
-                                            "
-                                        >
-                                            4
-                                        </div>
-                                    </div>
-                                </div>
+                                구매하기
                             </div>
                         </div>
                     </div>
                     <div
-                        class="Frame673"
+                        class="IconShare"
                         style="
-                            width: 603.5px;
-                            padding-left: 24px;
-                            padding-right: 24px;
+                            width: 40px;
+                            height: 40px;
                             justify-content: center;
                             align-items: center;
-                            display: inline-flex;
+                            display: flex;
                         "
                     >
-                        <div
-                            class="Frame672"
-                            style="
-                                flex: 1 1 0;
-                                height: 49px;
-                                justify-content: flex-start;
-                                align-items: center;
-                                gap: 16px;
-                                display: flex;
-                            "
-                        >
-                            <div
-                                class="Btns"
-                                style="
-                                    padding-left: 30px;
-                                    padding-right: 30px;
-                                    padding-top: 10px;
-                                    padding-bottom: 10px;
-                                    border-radius: 10px;
-                                    border: 1px #1f0e81 solid;
-                                    justify-content: center;
-                                    align-items: center;
-                                    gap: 6px;
-                                    display: flex;
-                                "
-                            >
-                                <div
-                                    style="
-                                        color: #1f0e81;
-                                        font-size: 20px;
-                                        font-family: Noto Sans KR;
-                                        font-weight: 400;
-                                        word-wrap: break-word;
-                                    "
-                                >
-                                    장바구니
-                                </div>
-                            </div>
-                            <div
-                                class="Btns"
-                                style="
-                                    padding-left: 30px;
-                                    padding-right: 30px;
-                                    padding-top: 10px;
-                                    padding-bottom: 10px;
-                                    background: #1f0e81;
-                                    border-radius: 10px;
-                                    justify-content: center;
-                                    align-items: center;
-                                    gap: 6px;
-                                    display: flex;
-                                "
-                            >
-                                <div
-                                    style="
-                                        color: white;
-                                        font-size: 20px;
-                                        font-family: Noto Sans KR;
-                                        font-weight: 400;
-                                        word-wrap: break-word;
-                                    "
-                                >
-                                    구매하기
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            class="IconShare"
-                            style="
-                                width: 40px;
-                                height: 40px;
-                                justify-content: center;
-                                align-items: center;
-                                display: flex;
-                            "
-                        >
-                            <img
-                                class="Image110"
-                                style="width: 40px; height: 40px"
-                                src="https://via.placeholder.com/40x40"
-                            />
-                        </div>
+                        <img
+                            class="Image110"
+                            style="width: 40px; height: 40px"
+                            src="https://via.placeholder.com/40x40"
+                        />
                     </div>
-                <!-- </div> -->
+                </div>
             </article>
         </section>
         <div
