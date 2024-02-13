@@ -144,3 +144,49 @@ input[type="radio"] {
 .BtnsColor {
     gap: 8px;
 }
+
+.Size {
+    gap: 16px;
+    display: inline-flex;
+    font-size: 20px;
+}
+
+.BtnsSize {
+    width: 40px;
+    height: 40px;
+    border: 0.5px #968f8f solid;
+    font-size: 20px;
+    color: #968f8f;
+    line-height: 40px;
+    text-align: center;
+    background-color: white;
+}
+
+.Btns {
+    padding-top: 240px;
+}
+
+.Btn {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+
+.Btn-cart {
+    border: 1px #1f0e81 solid;
+    background-color: white;
+    color: #1f0e81;
+}
+.Btn-purchase {
+    background: #1f0e81;
+    color: white;
+}
+
+.send-btn {
+    font-size: 32px;
+    border-style: none;
+    background-color: white;
+    float: right;
+}
