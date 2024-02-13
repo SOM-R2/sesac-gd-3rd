@@ -190,3 +190,115 @@ input[type="radio"] {
     background-color: white;
     float: right;
 }
+
+.OptionBar {
+    /* align-self: stretch;
+    padding-left: 255px;
+    padding-right: 255px;
+    padding-top: 18px; */
+    padding-bottom: 32px;
+    /* justify-content: flex-start;
+    align-items: flex-end; */
+    /* gap: 1px; */
+    display: inline-flex;
+    border-bottom: 1px #968f8f solid;
+}
+
+.product-nav {
+    height: 98px;
+    width: 20vw;
+    line-height: 98px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #968f8f;
+    border-right: 1px #968f8f solid;
+}
+.product-nav-QNA {
+    height: 98px;
+    width: 20vw;
+    line-height: 98px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #968f8f;
+}
+
+.ProductExplain {
+    align-self: stretch;
+    height: 3381px;
+    padding-left: 320px;
+    padding-right: 320px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    display: flex;
+}
+
+.product-explain-header {
+    height: 160px;
+}
+
+#product-info {
+    color: black;
+    font-size: 20px;
+}
+.explain-detail {
+    color: #968f8f;
+    font-size: 20px;
+    word-wrap: break-word;
+}
+.detail-fabric {
+    align-self: stretch;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+    display: inline-flex;
+}
+.detail-img {
+    width: 592px;
+    height: 528px;
+}
+
+.detail-fabric-explain {
+    padding-top: 22px;
+    padding-bottom: 22px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+    display: inline-flex;
+}
+
+.detail-fabric-explain-header {
+    width: 668px;
+    /* justify-content: center; */
+    align-items: center;
+    display: inline-flex;
+    color: black;
+    font-size: 20px;
+}
+
+.detail-fabric-explain-content {
+    width: 668px;
+    height: 176px;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    display: inline-flex;
+    color: #968f8f;
+    font-size: 20px;
+    word-wrap: break-word;
+}
+
+.detail-fabric-explain-add {
+    width: 668px;
+    height: 27px;
+    padding: 8px;
+    gap: 8px;
+    display: inline-flex;
+    color: #968f8f;
+    font-size: 20px;
+}
