@@ -1,0 +1,77 @@
+.box {
+    display: inline-block;
+    width: 400px;
+    height: 500px;
+    border: 1px solid #000;
+}
+
+/* 배경 색 관련 속성 */
+.background {
+    /* background-color는 background만 작성해도 스타일을 지정할 수 있음 */
+    /* background -> 단축속성 */
+    /* 단축속성 순서 
+        color image repeat position size 
+    */
+    background-color: aqua;
+    background: palevioletred;
+    /* 그라데이션 */
+    /* default : top to bottom (위에서 아래로) */
+    background: linear-gradient(gold, yellowgreen);
+    /* 각도 외에도 방향으로 작성해도 됨 */
+    background: linear-gradient(to left, gold, yellowgreen);
+    /* 색상 앞에 to bottom, to top, to right, to left, deg 입력 시 해당 방향으로 그라데이션 됨 */
+    background: linear-gradient(to right, gold, 20%, yellowgreen);
+    /* 색상 뒤에 콜론(,) 후 % 입력 시 해당 색상의 차지 비율 지정 */
+}
+
+/* 배경 이미지 관련 속성 */
+.background-image {
+    background-image: url("../img/small_img.png");
+
+    /* 1.background-repeat */
+    /* default */
+    background-repeat: repeat;
+
+    /* 반복 x : no-repeat */
+    background-repeat: no-repeat;
+
+    /* x축, y축 반복 : repeat-x or repeat-y */
+    background-repeat: repeat-x;
+
+    /* 2. background-position */
+    /* center, bottom, left, right, top, 단위 */
+    background-repeat: no-repeat;
+    background-position: center;
+    /* 두 가지 방향 따로 지정 가능 x축 y축 순서 */
+    background-position: center top;
+
+    /* 3. background-size */
+    /* default : 원래 이미지 크기 유지 */
+    background-size: auto;
+
+    /* 50px는 가로축 크기 세로축(height)는 가로축에 맞게 알아서 조정됨 */
+    /* 1개 입력 시 배경 이미지의 가로 길이 세로 길이는 비율에 맞춰 자동 지정됨 */
+    background-size: 50px;
+
+    /* 2개 입력 시 첫 번쨰는 가로 너비 두번째는 세로 길이 */
+    /* 가로 세로를 직접 지정할 경우 이미지 모양이 깨질 수 있음 */
+    background-size: 100px 70px;
+
+    /* contain : 배경 사이즈의 작은 축에 맞춰 이미지 크기 지정(가장 많이 사용) */
+    /* 이미지가 짤리지 않기 때문에 자주 사용됨 */
+    background-size: contain;
+
+    /* cover : 배경 사이즈의 긴 축에 맞춰 이미지 크기 지정 */
+    background-size: cover;
+
+    /* 짤린 부분을 overflow 속성을 사용해 보여줄 수 없음 */
+    overflow: scroll;
+
+    /* background-attachment */
+    /* default */
+    background-attachment: scroll;
+    /* background-attachment : fixed 일 때 기준은 viewport ! 사이즈나 위치가 뷰포트 기준으로 고정됨 */
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100px;
+}

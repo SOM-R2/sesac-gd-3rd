@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 5000px;
+    background: linear-gradient(white, orange);
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 100px;
+}
+
+/* position: static; (default_) */
+/* 
+    - 기본 값이기 떄문에 작성하지 않아도 됨(주석처리를 하던 안하던 결과가 동일)
+    - inline 요소라면 왼쪽에서 오른쪽으로 쌓임
+    - block 요소라면 위에서 아래로 쌓임
+*/
+
+/* top, bottom, right, left 속성 적용 안됨 */
+.position-static {
+    /* position: static; */
+    background-color: pink;
+    /* top: 100px; */
+}
+
+/* position: relative -> 상대 위치 */
+/* 일반적인 흐름에 따라 배치하되(원래 위치가 계속 비워져 남아 있기 때문에), top, bottom, left, right 속성을 사용해 위치 지정 */
+/*
+    - 자신이 원래 있어야 하는 위치 기준
+    - top : 위에서부터의 여백
+    - bottom: 아래서부터의 여백
+    - right : 오른쪽으로부터의 여백
+    - left :왼쪽으로부터의 여백
+*/
+/* 자기의 자리를 벗어나도 원래 자리가 비어있음 -> 문서의 흐름을 깨지 않음 */
+.position-relative {
+    background-color: lightblue;
+    position: relative;
+    /* left: 100px; */
+    /* top: 50px; */
+    bottom: 30px;
+    right: 15px;
+}
+
+/* position: absolute; -> 절대 위치(고정이 되지는 않음) */
+/* 
+    -기준점  
+        - position: static이 아닌 값을 가지는 제일 가까운 조상 기준
+        - 만약 position: static이 아닌 값을 가진 조상이 없다면 viewport를 기준
+        - 특정 요소를 기준 삼아 top, bottom, left, right 속성을 지정함  
+*/
+/* 문서 흐름을 벗어남 -> 자기 자리가 사라짐 */
+.position-absolute {
+    background-color: gold;
+    position: absolute;
+    top: 0;
+}
+
+/* position: fixed; -> 고정 위치 */
+/* 
+    - viewport 기준으로 특정 위치에 배치
+    - 스크롤 되어도 움직이지 않음 -> header, top-button 제작 시 많이 사용
+    - top, bottom, left, right 속성 중 하나 이상을 지정
+    - 내 원래 위치는 사라지고 (문서흐름깨짐) 지정한 위치에 고정 (absolute처럼 자기 자리가 사라짐) 
+*/
+.position-fixed {
+    background-color: coral;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+}
+
+/* position: sticky; -> top 속성의 위치에 도달했을 때 부터 해당 위치에 고정 */
+/* 부모 요소 내에서만 sticky로 작동함 -> html 구조 매우 중요 */
+.position-sticky {
+    background-color: palegreen;
+    top: 0; /* 뷰포트의 최상단에 도달했을 때 고정 */
+    position: sticky;
+}
+
+.sticky-container {
+    height: 1200px;
+    width: 100vw;
+    background: linear-gradient(lightblue, lightpink);
+}

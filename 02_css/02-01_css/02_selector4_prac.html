@@ -52,14 +52,17 @@
             #red:checked + label {
                 background-color: red;
                 color: white;
+                font-size: 700;
             }
             #blue:checked + label {
                 background-color: blue;
                 color: white;
+                font-size: 700;
             }
             #yellow:checked + label {
                 background-color: yellow;
                 color: black;
+                font-size: 700;
             }
 
             /* active */
@@ -105,12 +108,14 @@
                 rows="10"
                 placeholder="건의 사항 🎈"
             ></textarea>
-            <input type="checkbox" id="red" />
-            <label for="red">빨강</label>
-            <input type="checkbox" id="blue" />
-            <label for="blue">파랑</label>
-            <input type="checkbox" id="yellow" />
-            <label for="yellow">노랑</label>
+            <br />
+            <input type="checkbox" name="color" id="red" />
+            <label for="red"> 빨강</label>
+            <input type="checkbox" name="color" id="blue" />
+            <label for="blue"> 파랑</label>
+            <input type="checkbox" name="color" id="yellow" />
+            <label for="yellow"> 노랑</label>
+            <br />
             <button>제출</button>
         </form>
     </body>
