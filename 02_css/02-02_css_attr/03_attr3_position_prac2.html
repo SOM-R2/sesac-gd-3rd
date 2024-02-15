@@ -13,6 +13,23 @@
         .product-info-detail {
             background-color: lightcoral;
         }
+        .search {
+            height: 40px;
+            width: 240px;
+            border-style: none;
+            background-color: rgba(173, 173, 173, 0.2);
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+            background-image: url("../img/search-icon.png");
+            background-size: 24px;
+            background-repeat: no-repeat;
+            background-position: 10px center;
+        }
+        input[type="text"] {
+            padding-left: 40px;
+        }
     </style>
     <body>
         <main>
@@ -31,5 +48,12 @@
             </section>
         </main>
         <a href="#" class="top-btn">위로</a>
+
+        <br />
+        <br />
+        <br />
+        <hr />
+
+        <input type="text" placeholder="검색" class="search" />
     </body>
 </html>
