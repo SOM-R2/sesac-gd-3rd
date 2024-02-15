@@ -6,12 +6,28 @@
         <title>position 추가 실습</title>
     </head>
     <style>
+        main {
+            height: 1500px;
+        }
         .product-info {
-            height: 500px;
-            background-color: antiquewhite;
+            height: 300px;
+            width: 100vw;
+            background-color: lightblue;
         }
         .product-info-detail {
-            background-color: lightcoral;
+            background-color: blanchedalmond;
+            height: 500px;
+            width: 100vw;
+        }
+        li {
+            list-style: none;
+            display: inline;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+            line-height: 30px;
+            margin-right: 40px;
         }
         .search {
             height: 40px;
@@ -29,6 +45,26 @@
         }
         input[type="text"] {
             padding-left: 40px;
+        }
+
+        .search:focus {
+            background-color: white;
+        }
+        .fixed-tab {
+            background-color: lightcoral;
+            height: 30px;
+            position: sticky;
+            top: 0;
+        }
+
+        .top-btn {
+            background-color: pink;
+            border-radius: 100%;
+            padding: 10px;
+            border-style: none;
+            position: fixed;
+            right: 1px;
+            bottom: 30px;
         }
     </style>
     <body>
@@ -53,7 +89,6 @@
         <br />
         <br />
         <hr />
-
         <input type="text" placeholder="검색" class="search" />
     </body>
 </html>
