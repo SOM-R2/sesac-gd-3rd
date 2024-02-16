@@ -1,0 +1,204 @@
+.container {
+    /* flex 기본 용어 */
+    /* 주축: main axis */
+    /* 교차축: cross-axis */
+
+    /* display: flex;는 자식 요소의 정렬 방법을 지정하는 속성 */
+    /* display: inline-flex; 속성도 있음 */
+    /* flex와 inline-flex의 차이 */
+    /* 부모 요소의 정렬 방식을 지정! 거의 사용하지 않음.. */
+    /* flex는 부모 요소가 수직으로 쌓임 block요소처럼 */
+    /* lnline-flex는 부모 요소가 수평으로 쌓임 (inline 요소처럼) */
+
+    /* display: flex는 기본적으로 자식 요소들이 왼쪽에서 오른쪽으로 쌓임 */
+    /* 즉, 주측의 기본 방향이 좌 -> 우 */
+    display: flex;
+    width: 100vw;
+    background-color: antiquewhite;
+
+    /* flex-derection: 주축의 방향 지정 / 시작점 변경 */
+    /* flex-direction: row; (default) */
+
+    /* row-reverse: 우 -> 좌로 자식 요소들이 쌓임 */
+    flex-direction: row-reverse;
+    /* column: 위 -> 아래로 자식 요소들이 쌓임 */
+    flex-direction: column;
+
+    /* column-reverse: 아래 -> 위로 자식 요소들이 쌓임 */
+    flex-direction: column-reverse;
+
+    flex-direction: row;
+    width: 350px;
+
+    /* wrap 속성 */
+    /* flex-wrap : wrap 속성 사용 시 컨테이너의 크기를 벗어나면 (요소의 크기는 고정된 상태로) 요소 줄바꿈을 지정 */
+    /* wrap 속성을 지정하지 않고 컨테이너의 크기가 줄어들면 안의 요소들의 크기도 같이 줄어듦(크기를 따로 지정했더라도) */
+    /* flex-wrap: nowrap (default); */
+    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
+
+    /*  flex-direction: column; 일 때는 height를 주면 됨 */
+    flex-direction: column;
+    height: 300px;
+}
+
+.item {
+    width: 100px;
+    height: 100px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 100px;
+}
+
+.item1 {
+    /* align-items: baseline; 확인을 위해 font-size 변경 */
+    font-size: 20px;
+    background-color: red;
+}
+
+.item2 {
+    /* align-items: baseline; 확인을 위해 font-size 변경 */
+    font-size: 40px;
+    background-color: orange;
+}
+
+.item3 {
+    background-color: yellow;
+}
+
+.item4 {
+    background-color: green;
+}
+.item5 {
+    background-color: blue;
+}
+
+/* justify-contnet (정렬 방법) 수업  */
+
+.container4 {
+    display: flex;
+    /* body의 기본여백알 지워야 100vw 를 제대로 확인할 수 있음 여백이 남아있으면 넘칠수 있음..  */
+    width: 100vw;
+    background-color: antiquewhite;
+
+    /* justify-content: 주축 item의 정렬 방법(배치 방법) */
+
+    /* 
+        - justify-content: flex-start(default) -> 요소를 start 지점을 기준으로 나열
+        - justify-content: flex-end -> 요소를 end 지점을 기준으로 나열
+        - justify-content: center -> 요소 가운데 정렬
+        - justify-content: space-around -> 요소들의 모든 여백을 동일하게 갖도록 함 (양끝 여백의 단위가 1이라면, 요소 사이의 여백들은 2(1+1))
+        - justify-content: space-evenly -> start부터 첫 요소의 간격, 요소 사이의 간격, 마지막 요소부터 end 까지의 모든 간격이 동일
+        - justify-content: space-between -> 처음과 마지막 요소를 양 끝에 붙이고(여백 없음), 나머지 요소들간의 사이 간격을 동일하게 나눔
+     */
+
+    flex-direction: column;
+    height: 100vh;
+
+    justify-content: center;
+
+    justify-content: flex-end;
+
+    justify-content: space-around;
+
+    justify-content: space-evenly;
+
+    justify-content: space-between;
+}
+
+/* align-items 수업  */
+.container5 {
+    /* align-items -> 교차축에 대해 item을 어떻게 배치 할 것인가  */
+
+    /* 
+        - align-items : stretch; (default) -> container 의 교차축을 모두 채우기 위해 늘림
+            -> 아이템의 높이나 너비가 지정되지 않았을 때 자동으로 교차축을 채우기 위해 늘어남
+        - align-items : flex-start; -> 교차 축의 시작점으로 정렬
+            -> 아이템의 높이나 너비가 지정되었을 때 자동으로 정렬됨 (아이템의 높이를 지정하면 자동으로 설정됨)
+        - align-items : flex-end; -> 교차축의 끝점으로 정렬
+        - align-items : center; -> 교차축의 중앙에 정렬 
+        - align-items : baseline; -> 아이템을 텍스트의 베이스라인 기준으로 정렬     
+    */
+    display: flex;
+    width: 100vw;
+    height: 300px;
+    background-color: antiquewhite;
+
+    align-items: flex-end;
+    align-items: center;
+
+    /* font-size나 g나 y처럼 크기가 다를 때 밑줄이 교차축 기준으로 동일한 라인으로 오도록 정렬함 */
+    align-items: baseline;
+}
+
+/* align-content 수업 */
+.container6 {
+    display: flex;
+    width: 350px;
+    height: 300px;
+    background-color: antiquewhite;
+
+    /* align-content -> 두 줄 이상에서 교차축 기준으로 아이템들의 정렬 방식 */
+    /* 조건 : flex-wrap: wrap 상태에서 아이템이 2줄 이상일 때 교차축 방향 설정(아이템보다 작은 컨테이너(너비나 높이)가 있을 때 적용된다.)  */
+
+    /* 
+        - align-content: stretch; -> 교차축 방향으로 모두 차지하기 위해 늘어남
+        - align-content: flex-start -> 교차축 방향으로 시작점으로 정렬
+        - align-content: flex-end -> 교차축 방향으로 끝점으로 정렬
+        - align-content: center -> 교차축 방향으로 중앙 정렬
+
+    */
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-content: flex-end;
+    align-content: center;
+}
+
+/* 아이템 속성 */
+
+.container8 {
+    background-color: #dfdfdf;
+    /* 100% : body의 모든 너비를 다 차지하겠다. */
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.container8 .item-pro {
+    /* width를 주석 처리하면 알아서 내용을 차지하게 되는데 안의 내용의 너비에 의해 요소들의 너비 비율이 정해짐 따라서 2번에 lorem으로 더비데이터가 들어있는 것만 넓게 자리를 차지함 (html 2번 lorem 주석 풀고 확인하기) */
+    width: 50px;
+    height: 50px;
+}
+
+.item1-pro {
+    background-color: lightcoral;
+    /* 
+    order : 1. 속성 값이 없으면 순서 정렬되지 않음
+            2. 원래 있던 자리가 비었다면 앞으로 땡겨와짐
+            3. order: 1;이 가장 맨 앞으로 오고, 숫자가 클 수록 뒤로감 
+            4. 하나만 쓰면 변경이 없다.  
+
+    */
+    order: 5;
+}
+.item2-pro {
+    background-color: lightsalmon;
+    /* 얘 혼자만 정렬이 다름 */
+    align-self: flex-start;
+}
+.item3-pro {
+    background-color: lightyellow;
+    /* 지정한 (최소) 너비를 차지하기 위해 노력함... 잘 사용하지 않음 */
+    flex-basis: 100px;
+}
+.item4-pro {
+    background-color: lightgreen;
+    order: 4;
+    flex-grow: 1;
+}
+.item5-pro {
+    background-color: lightblue;
+    order: 1;
+    flex-grow: 2;
+}

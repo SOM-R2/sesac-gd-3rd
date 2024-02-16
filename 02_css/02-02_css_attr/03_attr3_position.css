@@ -87,3 +87,51 @@ div {
     width: 100vw;
     background: linear-gradient(lightblue, lightpink);
 }
+
+/* z-index관련 css */
+.parent {
+    position: relative;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.circle1 {
+    background-color: #9afaff;
+    top: 0;
+    left: 200px;
+    /* 불필요한 z-index는 사용하지않는게 좋음 */
+    /* z-index: 1; */
+}
+
+.circle2 {
+    background-color: #84ff8d;
+    top: 0;
+    left: 150px;
+    /* z-index: 2; */
+}
+
+.circle3 {
+    background-color: #ffeb88;
+    top: 0;
+    left: 100px;
+    z-index: 3;
+}
+
+.circle4 {
+    background-color: #ffb680;
+    top: 0;
+    left: 50px;
+    z-index: 2;
+}
+
+.circle5 {
+    top: 0;
+    left: 0;
+    background-color: #ff7c7c;
+    /* z-index: 1; */
+}

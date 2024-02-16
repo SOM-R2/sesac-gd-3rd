@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>display : flex 속성</title>
+        <link rel="stylesheet" href="./03_attr4_flex.css" />
+
+        <!-- flex-direction 실습 css -->
+        <style>
+            .prac-item1 {
+                background-color: pink;
+            }
+            .prac-item2 {
+                background-color: aqua;
+            }
+            .prac-item3 {
+                background-color: burlywood;
+            }
+            .container2 {
+                display: flex;
+                width: 100vw;
+                background-color: antiquewhite;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .container3 {
+                display: flex;
+                width: 500px;
+                height: 500px;
+                background-color: antiquewhite;
+                flex-wrap: wrap;
+            }
+            .prac-item {
+                width: 100px;
+                height: 100px;
+                border: 1px solid blue;
+            }
+            .container7 {
+                width: 500px;
+                height: 500px;
+                display: flex;
+                background-color: antiquewhite;
+                flex-wrap: wrap;
+                flex-direction: column;
+                align-content: flex-start;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="item item1">1</div>
+            <div class="item item2">2</div>
+            <div class="item item3">3</div>
+            <div class="item item4">4</div>
+            <div class="item item5">5</div>
+        </div>
+
+        <br />
+        <br />
+        <br />
+        <hr />
+        <!-- flex-direction 실습 -->
+        <h2>flex-direction 실습</h2>
+        <div class="container2">
+            <div class="prac-item1 item">item1</div>
+            <div class="prac-item2 item">item2</div>
+            <div class="prac-item3 item">item3</div>
+        </div>
+
+        <br />
+        <br />
+        <br />
+        <hr />
+        <!-- flex-wrap 실습 -->
+        <h2>flex-wrap 실습</h2>
+        <div class="container3">
+            <div class="prac-item">item</div>
+            <div class="prac-item">item</div>
+            <div class="prac-item">item</div>
+            <div class="prac-item">item</div>
+            <div class="prac-item">item</div>
+            <div class="prac-item">item</div>
+            <div class="prac-item">item</div>
+            <div class="prac-item">item</div>
+        </div>
+
+        <br />
+        <br />
+        <br />
+        <hr />
+
+        <!-- justify-contnet (정렬 방법) 수업 -->
+
+        <h2>justify-contnet 수업</h2>
+        <div class="container4">
+            <div class="item item1">1</div>
+            <div class="item item2">2</div>
+            <div class="item item3">3</div>
+            <div class="item item4">4</div>
+            <div class="item item5">5</div>
+        </div>
+
+        <br />
+        <br />
+        <br />
+        <hr />
+
+        <!-- align-items 수업 -->
+
+        <h2>align-items 수업</h2>
+        <div class="container5">
+            <div class="item item1">1</div>
+            <div class="item item2">2</div>
+            <div class="item item3">3</div>
+            <div class="item item4">4</div>
+            <div class="item item5">5</div>
+        </div>
+
+        <br />
+        <br />
+        <br />
+        <hr />
+
+        <!-- align-content 수업 -->
+
+        <h2>align-content 수업</h2>
+        <div class="container6">
+            <div class="item item1">1</div>
+            <div class="item item2">2</div>
+            <div class="item item3">3</div>
+            <div class="item item4">4</div>
+            <div class="item item5">5</div>
+        </div>
+
+        <br />
+        <br />
+        <br />
+        <hr />
+
+        <!-- flex-wrap 실습2 -->
+        <h2>flex-wrap 실습2</h2>
+        <div class="container7">
+            <div class="prac-item">item</div>
+            <div class="prac-item">item</div>
+            <div class="prac-item">item</div>
+            <div class="prac-item">item</div>
+            <div class="prac-item">item</div>
+            <div class="prac-item">item</div>
+            <div class="prac-item">item</div>
+            <div class="prac-item">item</div>
+        </div>
+
+        <br />
+        <br />
+        <br />
+        <hr />
+        <!-- 아이템 속성 수업 -->
+        <!-- 
+            자동완성 단축 코드
+            .container2>.item.item$*5 
+        -->
+        <div class="container8">
+            <div class="item-pro item1-pro">1</div>
+            <div class="item-pro item2-pro">
+                <!-- Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Consectetur voluptatibus veritatis amet culpa numquam beatae?
+                Modi consequatur, dignissimos reiciendis eligendi amet iure ipsa
+                voluptate suscipit rem harum voluptatem quas temporibus. -->
+                2
+            </div>
+            <div class="item-pro item3-pro">3</div>
+            <div class="item-pro item4-pro">4</div>
+            <div class="item-pro item5-pro">5</div>
+        </div>
+    </body>
+</html>

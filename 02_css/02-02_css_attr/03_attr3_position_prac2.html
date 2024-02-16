@@ -6,6 +6,81 @@
         <title>position 추가 실습</title>
     </head>
     <style>
+        /* 강사님 답 */
+        body {
+            /* 기본 속성 지우고 높이 줌 */
+            margin: 0;
+            padding: 0;
+            height: 100000px;
+        }
+
+        ul {
+            /* 기본 속성 지우기 */
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        a {
+            /* 기본 속성 지우기 */
+            color: #000;
+            text-decoration: none;
+        }
+
+        .product-info {
+            height: 50vh;
+            background-color: aliceblue;
+        }
+
+        .product-info-detail {
+            height: 600px;
+            background-color: antiquewhite;
+        }
+
+        .fixed-tab {
+            position: sticky;
+            top: 0;
+            background-color: pink;
+        }
+
+        /*
+         .fixed-tab a 의 displayfmf block으로 바꿨기 떄문에 높이지정을 하지 않아야함 (지정하면, a태그의 padding값을 주면 깨짐)
+        .fixed-tab u {
+            height: 30px;
+        } 
+        */
+
+        .fixed-tab li {
+            /* ul에 display:fixed 했기 떄문에 inline-block은 주석처리 */
+            /* display: inline-block; */
+            /* li의 부모인 ul의 높이를 모두 사용해라 */
+            height: 100%;
+            margin: 0;
+            text-align: center;
+        }
+
+        /* 보통은 padding으로 위아래 간격주고, 좌우는 플렉스 속성?을 사용하는게 일반적?   */
+        .fixed-tab a {
+            display: block;
+            padding: 10px 0;
+        }
+
+        .top-btn {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            background-color: aquamarine;
+        }
+
+        /* 내 답 */
+        /* 
         main {
             height: 1500px;
         }
@@ -29,6 +104,26 @@
             line-height: 30px;
             margin-right: 40px;
         }
+        .fixed-tab {
+            background-color: lightcoral;
+            height: 30px;
+            position: sticky;
+            top: 0;
+        }
+
+        .top-btn {
+            background-color: pink;
+            border-radius: 100%;
+            padding: 10px;
+            border-style: none;
+            position: fixed;
+            right: 1px;
+            bottom: 30px;
+        } 
+        */
+
+        /* 검색창 만들기 실습 */
+        /* 내 답 */
         .search {
             height: 40px;
             width: 240px;
@@ -50,21 +145,28 @@
         .search:focus {
             background-color: white;
         }
-        .fixed-tab {
-            background-color: lightcoral;
-            height: 30px;
-            position: sticky;
-            top: 0;
+
+        /* 강사님 답 */
+        input {
+            height: 50px;
+            background-color: #f5f5f5;
+            border: none;
+            border-radius: 25px;
+            background-image: url("../img/search-icon.png");
+            background-size: 30px;
+            background-repeat: no-repeat;
+            background-position: 15px 10px;
+            padding: 0 15px 0 55px;
+            font-size: 20px;
         }
 
-        .top-btn {
-            background-color: pink;
-            border-radius: 100%;
-            padding: 10px;
-            border-style: none;
-            position: fixed;
-            right: 1px;
-            bottom: 30px;
+        input:focus {
+            outline: none; /* focus 시 자동으로 생기는 테두리 속성 */
+        }
+
+        /* not(input:focus)은 포커스 되었을 때를 제외한 hover 상태를 위해 작성 */
+        input:hover:not(input:focus) {
+            background-color: #b0b0b0;
         }
     </style>
     <body>
@@ -89,6 +191,10 @@
         <br />
         <br />
         <hr />
+        <!-- 검색창 만들기 실습 -->
+        <!-- 내 답 -->
         <input type="text" placeholder="검색" class="search" />
+        <!-- 강사님 답 -->
+        <input type="text" placeholder="검색" />
     </body>
 </html>
