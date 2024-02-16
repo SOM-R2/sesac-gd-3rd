@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>애벌레 만들기 실습</title>
+        <style>
+            .container {
+                width: 500px;
+                height: 350px;
+                position: relative;
+            }
+            .container > * {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+            }
+
+            #img {
+                width: 500px;
+                border-radius: 0;
+                position: absolute;
+                bottom: 0;
+            }
+
+            .circle1 {
+                background-color: navy;
+                position: absolute;
+                top: 60px;
+                left: 50px;
+            }
+
+            .circle2 {
+                background-color: rgb(63, 63, 201);
+                position: absolute;
+                top: 120px;
+                left: 100px;
+            }
+
+            .circle3 {
+                background-color: rgba(115, 153, 222, 0.959);
+                position: absolute;
+                top: 150px;
+                left: 150px;
+            }
+
+            .circle4 {
+                background-color: rgb(86, 167, 228);
+                position: absolute;
+                bottom: 40px;
+                left: 190px;
+            }
+            .circle5 {
+                background-color: rgb(147, 239, 253);
+                position: absolute;
+                bottom: 20px;
+                left: 250px;
+            }
+            #eyes {
+                background-color: white;
+                position: absolute;
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                top: 20px;
+                left: 20px;
+            }
+
+            #eyes1 {
+                background-color: black;
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                top: 10px;
+                left: 1px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="circle1">
+                <div id="eyes">
+                    <div id="eyes1"></div>
+                </div>
+            </div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+            <div class="circle4"></div>
+            <img src="../img/grass.png" alt="잔디" id="img" />
+            <div class="circle5"></div>
+        </div>
+    </body>
+</html>

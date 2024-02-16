@@ -7,15 +7,98 @@
         <title>Flexbox 마스터 - header 만들기</title>
 
         <style>
+            * {
+                box-sizing: border-box;
+                font-size: 20px;
+                font-weight: 700;
+                margin: 0;
+                padding: 0;
+            }
             header {
-                height: 40px;
+                width: 100%;
+                height: 60px;
                 background-color: #dfdfdf;
+                padding: 0 20px;
+
+                display: flex;
             }
             li {
                 list-style: none;
                 text-decoration: none;
                 color: black;
             }
+
+            /* header 1 */
+            .header1 > ul {
+                display: flex;
+            }
+
+            .header1 > ul > li {
+                padding: 0 10px;
+            }
+            .header1 {
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            /* header 2 */
+            .header2 {
+                align-items: center;
+            }
+
+            .header2 > ul {
+                flex-direction: row;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            /* header 3 */
+            .header3 {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .header3 ul {
+                display: flex;
+            }
+
+            .header3 ul li {
+                padding: 0 10px;
+            }
+            /* header 4 선택과제 */
+            .header4 {
+                display: flex;
+                align-items: center;
+            }
+
+            .header4 > ul {
+                display: flex;
+                width: 100%;
+                /* padding: 0 10px; */
+            }
+
+            .header4 > ul > li {
+                padding: 0 10px;
+            }
+
+            span {
+                padding: 0 10px;
+            }
+
+            /*
+            이렇게 하면 logo랑 signup에 padding이 안들어감  
+            .header4 > ul + * {
+                padding: 0 10px;
+            } 
+            */
+
+            /*
+            이러면 span 태그에도 padding 들어감...  
+            .header4 > * {
+                padding: 0 10px;
+            } */
         </style>
         <!-- css 이름과 경로에 맞게 href를 변경해주세요. -->
         <link rel="stylesheet" href="" />
@@ -55,6 +138,21 @@
                 <li>MENU3</li>
             </ul>
             <span>LOGIN</span>
+        </header>
+
+        <br />
+        <hr />
+        <br />
+        <!-- header4 선택과제 -->
+        <header class="header4">
+            <span>LOGO</span>
+            <ul>
+                <li>MENU1</li>
+                <li>MENU2</li>
+                <li>MENU3</li>
+            </ul>
+            <span>LOGIN</span>
+            <span>SIGNUUP</span>
         </header>
     </body>
 </html>
