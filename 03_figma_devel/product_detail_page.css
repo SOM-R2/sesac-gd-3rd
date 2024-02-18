@@ -1,23 +1,27 @@
 body {
+    margin: 0;
+    padding: 0;
     width: 100vw;
     height: 100vh;
     /* background: white; */
-    flex-direction: column;
+    /* flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
-    display: inline-flex;
+    align-items: center; */
+    /* display: inline-flex; */
     font-family: "Noto Sans KR", sans-serif;
     color: black;
+    /* display: flex; */
 }
 
 .HeaderCategoryHover {
     /* align-self: stretch; : 요소가 자신의 교차 축 크기를 늘리도록 설정합니다. */
-    padding-top: 24px;
-    padding-bottom: 24px;
+    /* padding-top: 24px;
+    padding-bottom: 24px; */
     /* background: white; */
-    justify-content: center;
-    align-items: center;
-    display: inline-flex;
+    /* justify-content: space-evenly;
+    align-items: center; */
+    display: flex;
+    justify-content: space-evenly;
 }
 header button {
     background-color: white;
@@ -39,13 +43,18 @@ header button img {
     height: 144px;
 }
 
+main {
+    padding-left: 320px;
+    padding-right: 320px;
+}
 .ProductSection {
-    align-self: stretch;
-    padding-top: 77px;
-    padding-bottom: 77px;
+    /* align-self: stretch; */
+    padding-top: 40px;
+    padding-bottom: 40px;
     justify-content: center;
     align-items: center;
-    display: inline-flex;
+    display: flex;
+    /* display: inline-flex; */
 }
 .product-purchase-info {
     height: 680px;
@@ -53,7 +62,7 @@ header button img {
     justify-content: space-between;
     align-items: center;
     /* display: inline-flex; */
-    display: inline-block;
+    /* display: inline-block; */
 }
 
 .prodcut-Image {
@@ -197,10 +206,13 @@ input[type="radio"] {
     padding-right: 255px;
     padding-top: 18px; */
     padding-bottom: 32px;
+    margin-left: 10vw;
+    margin-right: 10vw;
     /* justify-content: flex-start;
     align-items: flex-end; */
     /* gap: 1px; */
-    display: inline-flex;
+    display: flex;
+    justify-content: center;
     border-bottom: 1px #968f8f solid;
 }
 
@@ -227,8 +239,6 @@ input[type="radio"] {
 .ProductExplain {
     align-self: stretch;
     height: 3381px;
-    padding-left: 320px;
-    padding-right: 320px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -300,5 +310,10 @@ input[type="radio"] {
     gap: 8px;
     display: inline-flex;
     color: #968f8f;
+    font-size: 20px;
+}
+
+.size-info-title {
+    font-weight: 400;
     font-size: 20px;
 }
