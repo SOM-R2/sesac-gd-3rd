@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>이미지 3개 연달아 나열하기</title>
+        <style>
+            img {
+                width: 300px;
+                height: 200px;
+            }
+
+            .container {
+                width: 100vw;
+                height: 500px;
+                background-color: lightgray;
+                position: relative;
+            }
+
+            .beach {
+                position: absolute;
+                transform: skewy(30deg);
+
+                /* 대기시간 0초, 1초 동안 바뀌고, ease-in 속도로  */
+                transition: 1s;
+            }
+
+            .beach:hover {
+                transform: skew(0);
+            }
+            .beach1 {
+                top: 180px;
+                left: 200px;
+                z-index: 3;
+            }
+
+            .beach2 {
+                top: 150px;
+                left: 350px;
+                z-index: 2;
+            }
+
+            .beach3 {
+                top: 120px;
+                left: 500px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- 실습 이미지 3개 연달아 나열하기  -->
+        <div class="container">
+            <div class="beach beach1">
+                <img src="../img/beach1.jpg" alt="해변 1" class="img-prac" />
+            </div>
+            <div class="beach beach2">
+                <img src="../img/beach2.jpg" alt="해변 2" class="img-prac" />
+            </div>
+            <div class="beach beach3">
+                <img src="../img/beach3.jpg" alt="해변 3" class="img-prac" />
+            </div>
+        </div>
+    </body>
+</html>

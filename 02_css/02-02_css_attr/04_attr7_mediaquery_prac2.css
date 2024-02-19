@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: lightblue;
+}
+
+header .inner {
+    position: relative;
+    height: 100%;
+    margin: auto;
+    /* 그냥 width로 작성하면 가로스크롤 생겨버림, 1200보다 늘어날수없게 max-width로 작성하기 */
+    max-width: 1200px;
+    padding: 0 1.5rem;
+}
+
+header .inner .logo {
+    line-height: 100px;
+    /* absolute를 하는 이유 : 요소 쌓인 순서에서 벗어나게 해서 li 메뉴들과 분리 해서 위치 고정 시킴 */
+    /* 메뉴 들은 정중앙에 위치하게 하기 위해 logo는 포지션 앱솔루트 줌! */
+    position: absolute;
+    /* i는 font-size로 크기 조절 */
+    font-size: 50px;
+    color: aliceblue;
+}
+
+.small-menu,
+.menu-bar {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .small-menu,
+    .menu-bar {
+        display: block;
+    }
+    .menu {
+        display: none;
+    }
+}

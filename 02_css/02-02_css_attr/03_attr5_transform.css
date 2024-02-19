@@ -1,0 +1,167 @@
+.img-box {
+    background-color: lightblue;
+    width: 400px;
+    height: 250px;
+}
+
+img {
+    /* 부모 너비가 400px 이므로 400px이 됨 (부모의 너비에 맞춰 알아서 들어가라) */
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    border: 1px solid gold;
+}
+
+img:hover {
+    /* 
+        1. skew()
+            - 원하는 각도만큼 요소를 기울임
+            -  x, y축 나누어 속성 부여 가능
+                - skewx(x_deg)
+                - skewy(y_deg)
+            - x, y 축 동시 사용 원하는 경우
+                - skew(x_deg, y_deg)
+    */
+
+    /* x축으로 비틀림 */
+    transform: skewX(30deg);
+
+    /* y축으로 비틀림 */
+    transform: skewY(30deg);
+
+    /* x축, y축에 대한 비틀림 */
+    transform: skew(30deg, 30deg);
+
+    /* 
+        2. scale()
+            - 크기를 조절함 (확대, 축소)
+                - 1보다 큰 값 : 해당 배수 만큼 확대
+                - 0 ~ 1 : 해당 배수만큼 축소
+
+    */
+
+    /* x축으로 2배 늘림 */
+    transform: scalex(2);
+
+    /* y축으로 0.5배 줄어듦 */
+    transform: scaleY(0.5);
+
+    /* x축으로 0.5배 줄어들고, y축으로 2배 늘어남 */
+    transform: scale(0.5, 2);
+
+    /* 
+        3.  translate()
+            - 요소를 이동
+            - translateX() : x축을 기준으로 이동
+            - translateY() : y축을 기준으로 이동
+            - translateZ() : z축을 기준으로 이동
+            - translate() : x, y축을 기준으로 이동
+    */
+
+    /* 요소가 오른쪽으로 감(양수) */
+    transform: translateX(100px);
+    /* 요소가 위로 올라감(음수) */
+    transform: translateY(-100px);
+    /* 그냥 작성하면 원근법이 없어서 확인 할 수 없음  */
+    transform: translateZ(100px);
+
+    /* z축 변화는 persective를 사용하지 않을 경우 확인 불가 */
+    transform: perspective(500px) translateZ(100px);
+
+    /* 2개 일 때 단축 속성 */
+    transform: translate(100px, 100px);
+    transform: translate(-100px, -100px);
+
+    /* 3개일 때 단축속성 translate3d()로 작성해야 함 */
+    transform: perspective(500px) translate3d(100px, 100px, 100px);
+
+    /* 
+        4. rotate()
+            - 회전
+            - 주어진 각도만큼 회전
+                - rotateX() : x축을 기준으로 회전
+                - rotateY() : y축을 기준으로 회전
+                - rotete() : 시계 방향으로 회전
+    */
+
+    transform: rotate(45deg);
+
+    /* 그냥 작성하면 원근법이 사라짐 */
+    transform: rotateX(45deg);
+
+    transform: perspective(500px) rotateX(45deg);
+
+    transform: perspective(500px) rotateY(45deg);
+
+    transform: perspective(500px) rotateX(180deg);
+
+    /* 뒷면 보임 여부 */
+    /* 요소를 뒤로 돌렸을 때 확실하게 안보이게 하는 속성  */
+    backface-visibility: visible; /* default */
+    backface-visibility: hidden;
+}
+
+/* transition */
+/* transition은 변화가 일어날 때 사용하는 속성 */
+/* 
+    transition: 프로퍼티 값 변경 시, 일정 시간에 걸쳐 변화가 일어나도록 함
+        - transition-property: 변화 대상 css 속성 지정 (default: all) 
+        - transition-duration: 변화가 일어날 시간 (단위: s) 
+        - transition-timing-function: 변화 시간 별 속도 지정 (default: ease)
+            - ease: 천천히 시작 -> 빨라짐 -> 느려짐 (두번째 많이 사용)
+            - linear: 속도 일정 (가장 많이 사용)
+            - ease-in: 천천히 시작 -> 정상 속도 
+            - ease-out: 정상 속도 -> 천천히 끝남 
+            - ease-in-out: 천천히 시작 -> 정상 속도 -> 느려짐
+        - transition-delay: 지연 시간 (단위: s) 
+*/
+
+.box {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    background-color: black;
+    /* transition 단축 속성은 지속시간만 작성 가능 */
+    /* property: all / timing-function: ease / delay: 0s가 기본으로 지정됨 */
+
+    /* 변화를 1초 동안 하겠다. */
+    transition: 1s;
+}
+
+.box:hover {
+    background-color: pink;
+    height: 120px;
+    width: 120px;
+    /* 이름 지정 */
+    /* transition-property: width; */
+    transition-duration: 1s;
+    transition-timing-function: ease-in;
+    transition-delay: 1s;
+    /* 단축 속성 */
+    /* 순서 중요 */
+    /* transition: property duration timeing-funtion delay */
+
+    /* 1초 뒤에 너비만 변경 됨 */
+    transform: width 1s ease-in 1s;
+
+    /* height 속성만 1초 동안 변화할꺼다 1초 뒤에 */
+    transition: height 1s ease-in 1s;
+
+    /* 원래 요소와 비교했을 때 바뀌는 모든 것들이 변경됨(default) */
+    transform: all 1s ease-in 1s;
+
+    /* property에 작성된 css 속성만 transition이 적용됨 */
+    /* width, height는 호버 하자마자 변하지만 배경색은 1초 뒤에 1초 동안 ease-in 속도로 분홍색으로 변화함 변경됨 */
+    /* 배경 색만 1초 뒤에 1초 동안 변경됨 */
+    transform: background-color 1s ease-in 1s;
+}
+
+.box2:hover {
+    background-color: aqua;
+    /* x축으로 200px 이동, x축으로 2배 확대 */
+    transform: translateX(200px) scale(2);
+}
+
+.box3:hover {
+    opacity: 0%;
+}

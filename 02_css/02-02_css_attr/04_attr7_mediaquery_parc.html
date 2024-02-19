@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>mediaquery</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            .media {
+                background-color: pink;
+            }
+
+            .header-mobile {
+                /* 우리가 만든 html을 아예 자리차지도 안하게 날려버림 */
+                display: none;
+            }
+
+            .img-container {
+                width: 100vw;
+                display: flex;
+                justify-content: space-around;
+            }
+
+            .img-container img {
+                width: 20vw;
+            }
+
+            @media screen and (max-width: 720px) {
+                .header-mobile {
+                    display: block;
+                }
+
+                .header-nomal {
+                    display: none;
+                }
+
+                .img-container {
+                    flex-direction: column;
+                    /* 가로 중앙 정렬 (주축을 column으로 바꿨기 때문)*/
+                    align-items: center;
+                }
+
+                .img-container img;
+            }
+            /* 화면의 너비가 최대 800px일 때 적용 -> 800px보다 좁을 때 적용 됨 */
+            @media screen and (max-width: 800px) {
+                .media {
+                    background-color: gold;
+                }
+            }
+
+            /* 화면의 너비가 최소 1200px일 때 적용 -> 1200px 보다 넓을 때 적용 됨 */
+            @media screen and (min-width: 1200px) {
+                .media {
+                    background-color: skyblue;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="media">mediaquery</div>
+
+        <hr />
+        <header class="header-nomal">웹, 테블릿 헤더</header>
+        <header class="header-mobile">모바일 헤더</header>
+
+        <hr />
+        <section class="img-container">
+            <img src="../img/pooh.png" alt="곰돌이 푸" />
+            <img src="../img/pooh.png" alt="곰돌이 푸" />
+            <img src="../img/pooh.png" alt="곰돌이 푸" />
+            <img src="../img/pooh.png" alt="곰돌이 푸" />
+        </section>
+    </body>
+</html>

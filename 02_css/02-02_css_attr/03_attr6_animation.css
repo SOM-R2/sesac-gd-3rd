@@ -1,0 +1,106 @@
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    position: relative;
+
+    /* animation 사용 */
+    animation-name: my-ani;
+    animation-duration: 5s;
+    animation-delay: 0.5s;
+    animation-iteration-count: 2;
+    animation-timing-function: linear;
+}
+
+/* @keyframes : 자바스크립트의 변수처럼 어떤 같을 저장해 놓고 불러 올 수 있음 */
+@keyframes my-ani {
+    0% {
+        /* position: relative;로 바꿨기 때문에 left 속성 사용 가능 */
+        left: 0;
+    }
+    25% {
+        left: 200px;
+    }
+    50% {
+        left: 400px;
+    }
+    75% {
+        left: 200px;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+.bounce-ball1 {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    left: 100px;
+    top: 0;
+    border-radius: 50%;
+    background-color: lightblue;
+
+    animation-name: bounce1;
+    /* 에니메이션 지속시간 */
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    /* 무한 반복 */
+    animation-iteration-count: infinite;
+
+    /* 애니메이션이 더 자연스럽게 연결 될 수 있도록 함 */
+    animation-direction: alternate;
+
+    /* 단축 프로퍼티 */
+    /* 단축 프로퍼티의 입력 순서 */
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: bounce1 1s ease-in infinite alternate;
+    /* direction 의 기본값은 alternate -> 사용하게 되면 시작 점이 계속 바꿔줌으로써 자연스럽게 연결되게 함 */
+}
+
+@keyframes bounce1 {
+    /* 끝나는 위치 지정 */
+    to {
+        top: 0;
+    }
+    /* 시작 위치를 지정 */
+    from {
+        top: 300px;
+    }
+}
+
+.bounce-ball2 {
+    width: 50px;
+    height: 50px;
+    background-color: lightcoral;
+    border-radius: 50%;
+    /* 에니메이션을 활용할 때 요소의 위치를 바꿀 예정이기 떄문에 relative나 absolute를 사용, 위치를 안바꿀꺼면 사용 x */
+    position: absolute;
+
+    /* 아래 3가지가 단축 속성의 필수 값 */
+    animation-name: bounce2;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+
+    /* 위 조건을 단축 속성으로 작성한 예시 */
+    animation: bounce2 2s infinite;
+}
+
+@keyframes bounce2 {
+    /* 아래는 from과 to의 bottom이 0이기 때문에, alternate 속성을 주지 않아도 자연스럽게 애니메이션이 연결됨 */
+
+    from,
+    to {
+        bottom: 0;
+        animation-timing-function: ease-out;
+        /* 0px에서 정상 속도로 시작해, 천천히 속도를 줄이면서 300px이 됨 */
+        width: 60px;
+    }
+
+    50% {
+        width: 100px;
+        bottom: 300px;
+        animation-timing-function: ease-in;
+        /* 300px에서 천천히 시작해, 0px로 가면서 정상 속도로 끝남 */
+    }
+}

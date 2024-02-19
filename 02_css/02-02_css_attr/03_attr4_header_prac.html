@@ -26,13 +26,12 @@
                 margin: 0;
                 padding: 0;
                 /* border-box 안주면 검색창 이상해짐 */
-                box-sizing: border-box;
+                /* box-sizing: border-box; */
             }
             .inner {
                 height: 64px;
                 display: flex;
                 align-items: center;
-                padding: 30px;
             }
             header {
                 height: 64px;
@@ -112,6 +111,109 @@
                 outline: 1px solid rgb(0, 196, 146);
                 box-shadow: 1px 0 10px rgba(135, 135, 135, 0.461);
             }
+
+            /* 강사님 답 */
+
+            /* * { */
+            /* 태그에 기본적으로 적용되어 있는 margin,padding 없애기 */
+            /* margin: 0;
+                padding: 0; */
+            /* border-box 안주면 검색창 이상해짐 */
+            /* box-sizing: border-box;
+            } */
+            /* header {
+                width: 100%;
+                height: 65px;
+                box-shadow: 1px 0 10px rgba(135, 135, 135, 0.461);
+            }
+
+            header .inner {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            header .inner .menu-left {
+                display: flex;
+                margin-right: 10px;
+            }
+
+            header .inner .menu-left .logo a {
+                color: green;
+            }
+
+            header .inner .menu-left .menu {
+                display: flex;
+            }
+
+            header .inner .menu-left .menu li {
+                margin-right: 10px; */
+            /* 여기서는 글자색 변경 안됨, 보통은 부모요소를 따라가지만 a태그 요소는 기본스타일링이 있기 때문에 여기서 선언안되고, a태그에 컬러를 직접 넣어줘야함 */
+            /* color: black; */
+            /* list-style: none;
+            } */
+
+            /* a {
+                text-decoration: none;
+                color: black;
+            }
+
+            header .inner .menu-left .menu li a:hover {
+                color: green;
+            }
+
+            header .inner .menu-right {
+                display: flex;
+                align-items: center;
+            } */
+
+            /* header .inner .menu-right .header__search {
+                position: relative;
+            } */
+            /* header .inner .menu-right .header__search input {
+                width: 150px;
+                height: 40px; */
+            /* transparent 부묘요소를 그대로 물려받겠다는 의미 */
+            /* border: 0.5px solid transparent;
+                border-radius: 3px;
+                background-color: #f6f6f6;
+                color: #363636;
+            } */
+            /* header .inner .menu-right .header__search input:hover {
+                border-color: #989898;
+            } */
+
+            /* focus 했을 때는 border 대신 outline 속성을 사용해야함 */
+            /* header .inner .menu-right .header__search input:focus {
+                outline-color: green;
+            } */
+            /* header .inner .menu-right .header__search i { */
+            /* 돋보기 input 안으로 이동시키기*/
+            /* 축으로 이동시킴 */
+            /* transform: translateY(-50%); */
+            /* position: absolute;
+                right: 10px;
+                top: 30%;
+            } */
+
+            /* btn */
+
+            /* .btn { */
+            /* 클릭요소라고 알려줄수있도록 바꿈 */
+            /* cursor: pointer;
+                margin-left: 5px;
+                padding: 0 5px;
+                border: 1px solid #989898;
+                border-radius: 5px;
+                line-height: 40px;
+            } */
+
+            /* .btn--red {
+                background-color: coral;
+                color: white;
+            } */
             /*
              2024.02.16. 노션 정리 : 자식요소 늘어나고 줄어드는 속성 비교를 위한 text  
              .text-container {
