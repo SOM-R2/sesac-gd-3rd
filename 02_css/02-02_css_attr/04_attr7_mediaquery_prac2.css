@@ -7,8 +7,16 @@
 ul,
 ol {
     list-style: none;
+    display: flex;
+    justify-content: center;
+    line-height: 100px;
 }
 
+.menu li {
+    font-weight: 700;
+    padding: 0 10px;
+    cursor: pointer;
+}
 header {
     width: 100%;
     height: 100px;
@@ -32,6 +40,7 @@ header .inner .logo {
     /* i는 font-size로 크기 조절 */
     font-size: 50px;
     color: aliceblue;
+    cursor: pointer;
 }
 
 .small-menu,
@@ -43,8 +52,30 @@ header .inner .logo {
     .small-menu,
     .menu-bar {
         display: block;
+        text-align: center;
+        background-color: rgb(242, 255, 255);
+        line-height: 50px;
+        cursor: pointer;
     }
     .menu {
         display: none;
+    }
+
+    header .inner .logo {
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+
+    header .inner {
+        padding: 0;
+    }
+
+    .menu-bar {
+        position: absolute;
+        right: 30px;
+        top: 25px;
+        background-color: lightblue;
+        cursor: pointer;
     }
 }

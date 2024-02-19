@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #c8feff;
+    animation: sky linear 13s infinite;
+}
+
+/* Section */
+section {
+    width: 1000px;
+    height: 600px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+section .sky {
+    /* section의 넓이는 받아옴 */
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* sun */
+section .sky .sun {
+    position: absolute;
+    width: 180px;
+    /* heigth 는 자동( 콘텐츠가 쌓이는 만큼) */
+    display: block;
+    left: 50%;
+    margin-left: -90px;
+    /* transform: translateX(-90px); */
+    /* tranform 이랑 transform-origin이랑 같이 적용 안됨 
+      중앙정렬을 위해 해의 반정도를 left-로 보낸것 */
+    top: -130px;
+    transform-origin: 50% 600px;
+    /* transform-origin
+      transform 속성 적용시 '어느 지점'을 기준으로 요소 변형되는지
+      ex> transform : rotate(180deg);를 정사각형 요소에 적용했을 때,
+      요소는 자기자신의 중심을 기준으로 '제자리'에서 회전합니다.
+      transform-origin 속성을 이용해서 회전하는 중심을 중앙이 아닌 다른 지점으로 보낼 수 있습니다.
+    
+      mdn참고: https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin
+      */
+    /* transform-origin : 50% 50%가 디폴트 (요소의 중앙이 움직임의 기준) */
+
+    /* 애니메이션 이름/ 시간함수이름 (linear는 등속운동)/ 지속시간/ 동작횟수*/
+    animation: sun linear 10s infinite;
+}
+
+/* moon */
+section .sky .moon {
+    position: absolute;
+    width: 160px;
+    left: 50%;
+    display: block;
+    margin-left: -80px;
+    top: -130px;
+
+    transform-origin: center 600px;
+    animation: moon linear 10s infinite;
+}
+
+/* 구름1 */
+section .sky .cloud_1 {
+    position: absolute;
+    width: 160px;
+    left: 0%;
+    display: block;
+
+    top: -30px;
+    animation: cloud1 linear 10s infinite;
+}
+
+/* 구름2 */
+section .sky .cloud_2 {
+    position: absolute;
+    width: 90px;
+    left: 12%;
+    display: block;
+    top: 20px;
+    animation: cloud2 linear 13s infinite;
+}
+
+/* CITY */
+section .city {
+    position: relative;
+    width: 100%;
+    background-color: yellow;
+}
+
+section .city .city_img {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+}
+
+/* KEY FRAMES */
+@keyframes sun {
+    0% {
+        transform: rotate(-90deg);
+        opacity: 0;
+    }
+
+    25% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    50% {
+        transform: rotate(90deg);
+        opacity: 0;
+    }
+    75% {
+        transform: rotate(180deg);
+        opacity: 0;
+    }
+    100% {
+        transform: rotate(270deg);
+        opacity: 0;
+    }
+}
+
+@keyframes moon {
+    0% {
+        transform: rotate(90deg);
+        opacity: 0;
+    }
+
+    25% {
+        transform: rotate(90deg);
+        opacity: 0;
+    }
+    50% {
+        transform: rotate(90deg);
+        opacity: 0;
+    }
+    75% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(-90deg);
+        opacity: 0;
+    }
+}
+
+@keyframes cloud1 {
+    0% {
+        left: 0%;
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 1;
+    }
+    50% {
+        left: 100%;
+        opacity: 0;
+    }
+
+    100% {
+        left: 0%;
+        opacity: 0;
+    }
+}
+
+@keyframes cloud2 {
+    0% {
+        left: 12%;
+        opacity: 0;
+    }
+
+    25% {
+        left: 50%;
+        opacity: 1;
+    }
+    50% {
+        left: 100%;
+        opacity: 0;
+    }
+
+    75% {
+        left: 60%;
+        opacity: 1;
+    }
+    100% {
+        left: 12%;
+        opacity: 0;
+    }
+}
+
+@keyframes sky {
+    0%,
+    100% {
+        background-color: #1a9193;
+    }
+
+    25% {
+        background-color: #75c8ff;
+    }
+    50% {
+        background-color: #ffc8ff;
+    }
+    75% {
+        background-color: #5840e4;
+    }
+}
