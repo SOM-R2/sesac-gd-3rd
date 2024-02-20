@@ -317,3 +317,30 @@ input[type="radio"] {
     font-weight: 400;
     font-size: 20px;
 }
+.ProductSize {
+    display: flex;
+    justify-content: center;
+}
+th {
+    width: 130px;
+    height: 47px;
+    padding: 8px;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: left;
+}
+
+td {
+    width: 130px;
+    height: 47px;
+    padding: 8px;
+    border-bottom: 1px black solid;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+caption {
+    text-align: left;
+    font-size: 20px;
+    font-weight: 400;
+}
