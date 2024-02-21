@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>bootstrap - utils</title>
+        <!-- bootstrap CDN 불러오기 -->
+        <!-- bootstrap CSS CDN link -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+            crossorigin="anonymous"
+        />
+        <!-- bootstrap JS CDN script -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <h1>bootstrap - utils</h1>
+
+        <!-- background -->
+        <h2>background</h2>
+        <div class="bg-primary">.bg-primary</div>
+        <div class="bg-secondary">.bg-secondary</div>
+        <div class="bg-success">.bg-success</div>
+        <div class="bg-danger">.bg-danger</div>
+        <div class="bg-warning">.bg-warning</div>
+        <div class="bg-info">.bg-info</div>
+        <div class="bg-light">.bg-light</div>
+        <div class="bg-dark text-white">.bg-dark</div>
+
+        <!-- transparent : 투명으로 부모의 배경색이 보이게 됨 -->
+        <div class="bg-primary">
+            parent
+            <!-- 부모 따라서 똑같은 색으로 들어감(투명하기 때문) -->
+            <div class="bg-transparent">.bg-transparent</div>
+        </div>
+
+        <!-- color -->
+        <h2>color</h2>
+        <p class="text-primary">.text-primary</p>
+        <p class="text-secondary">.text-secondary</p>
+        <p class="text-success">.text-success</p>
+        <p class="text-danger">.text-danger</p>
+        <p class="text-warning bg-dark">.text-warning</p>
+        <p class="text-info bg-dark">.text-info</p>
+        <p class="text-light bg-dark">.text-light</p>
+        <p class="text-dark">.text-dark</p>
+        <!-- 약간 투명한 text color가 들어감(rgba) -->
+        <p class="text-body">.text-body</p>
+        <!-- 약간 옅은 회색, 클릭되지 않는 요소에 적용하기 좋은 색 -->
+        <p class="text-muted">.text-muted</p>
+        <p class="text-white bg-primary">.text-white</p>
+
+        <!-- display -->
+        <h2>display</h2>
+        <!-- 
+            display: inline
+            - 컨텐트 크기 만큼 크기를 가짐
+            - 줄바꿈 X
+        -->
+        <div class="d-inline bg-danger">.d-inline</div>
+        <div class="d-inline bg-primary">.d-inline</div>
+        <br />
+        <br />
+
+        <!-- 
+            display: block;
+            - width가 자신의 부모요소의 100%를 차지함 -> 가로 한 줄을 모두 차지
+            - 줄 바꿈 O
+         -->
+        <span class="d-block bg-danger">.d-block</span>
+        <span class="d-block bg-primary">.d-block</span>
+        <br />
+        <br />
+        <!-- 
+            display: none;
+            - 아예 사라짐 -> 자리차지도 하지 않음
+        -->
+
+        <div class="d-none">.d-none</div>
+        <br />
+        <br />
+
+        <!-- 
+            display: flex;
+            - 기본적으로 가로 방향으로 배치되고, 자신이 가진 컨텐트의 width만큼 너비 차지
+            - height는 컨테이너의 높이만큼 늘어남 (height 지정하지 않은 경우 교차 축 만큼 늘어남)
+         -->
+        <!-- parent :  컨테이너(부모요소)라는걸 같이 지정해줘야함 -->
+        <div
+            class="parent d-flex justify-content-between align-items-center border"
+            style="height: 300px"
+        >
+            <!-- child : 컨테이너 내 자식요소라는 걸 각각 지정해줌 -->
+            <div
+                class="child text-primary border"
+                style="width: 100px; height: 100px"
+            >
+                .child
+            </div>
+            <div
+                class="child text-primary border"
+                style="width: 100px; height: 100px"
+            >
+                .child
+            </div>
+            <div
+                class="child text-primary border"
+                style="width: 100px; height: 100px"
+            >
+                .child
+            </div>
+            <div
+                class="child text-primary border"
+                style="width: 100px; height: 100px"
+            >
+                .child
+            </div>
+        </div>
+        <br />
+        <br />
+
+        <!-- border -->
+        <h2>border</h2>
+        <span class="border border-primary rounded">border</span>
+    </body>
+</html>

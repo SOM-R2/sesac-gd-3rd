@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>bootstrap - layout</title>
+        <!-- bootstrap CDN 불러오기 -->
+        <!-- bootstrap CSS CDN link -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+            crossorigin="anonymous"
+        />
+        <!-- bootstrap JS CDN script -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"
+        ></script>
+
+        <style>
+            body {
+                height: 2000px;
+                margin-top: 10vh;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 
+            container
+                - 가장 기본적인 레이아웃 요소 
+
+                .container: 반응형 고정 컨테이너
+                (브레이크 포인트 별로 알아서 양 옆 마진을 만들어줌, 피그마 배울 때 grid 사용해서 양 옆 여백 만들어줬던 것처럼 사용)
+                .container-fluid: 유동 컨테이너(뷰포트 전체 너비 사용)
+
+         -->
+        <h2 class="text-center">container</h2>
+        <div class="container bg-primary">.container</div>
+        <div class="container-fluid bg-warning">.container-fluid</div>
+        <br />
+
+        <!-- 반응형에서 컨테이너를 제한적으로 사용하는 법 -->
+
+        <!-- breakpoint로 작성한 크기보다 화면 너비가 작아지면 뷰포트 전체 너비 사용 -->
+        <!-- breakpoint의 sm(스몰) 보다 작을 때 뷰포트 모든 너비를 차지한다. -->
+        <div class="container-sm bg-primary">.container-sm</div>
+
+        <!-- breakpoint의 md(미디움) 보다 작아 질 때 뷰포트 모든 너비를 차지한다. -->
+        <div class="container-md bg-danger">.container-md</div>
+
+        <!-- breakpoint의 lg(라지) 보다 작아 질 때 뷰포트 모든 너비를 차지한다. -->
+        <div class="container-lg bg-info">.container-lg</div>
+        <br />
+        <br />
+
+        <!-- position -->
+        <h2>position</h2>
+        <!-- position: fix와 동일 -> 다른 요소의 위치 무시 -> margin 등을 사용해 레이아웃을 조정해야 함 -->
+        <!-- <div class="fixed-top bg-success" style="height: 10vh">.fixed-top</div> -->
+        <div class="fixed-bottom bg-success" style="height: 10vh">
+            .fixed-bottom
+        </div>
+
+        <!-- position: sticky -> 해당 요소가 지정한 위치에 도달했을 때부터 지정한 위치에 고정 (범위 부모요소)-->
+        <div style="height: 1000px; background-color: pink">
+            <div class="sticky-top bg-danger">.sticky-top</div>
+        </div>
+    </body>
+</html>

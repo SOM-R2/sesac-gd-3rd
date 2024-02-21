@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>bootstrap - conponents</title>
+        <!-- bootstrap CDN 불러오기 -->
+        <!-- bootstrap CSS CDN link -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+            crossorigin="anonymous"
+        />
+        <!-- bootstrap JS CDN script -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"
+        ></script>
+        <style>
+            body {
+                margin-bottom: 500px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>conponents</h1>
+
+        <h2>button</h2>
+        <!-- btn : bootstrap에게 버튼이란걸 알려주는 클래스 -->
+        <button type="button" class="btn btn-primary">primary</button>
+        <button type="button" class="btn btn-secondary">secondary</button>
+        <button type="button" class="btn btn-success">success</button>
+        <button type="button" class="btn btn-danger">danger</button>
+        <button type="button" class="btn btn-warning">warning</button>
+        <button type="button" class="btn btn-info">info</button>
+        <button type="button" class="btn btn-light">light</button>
+        <button type="button" class="btn btn-dark">dark</button>
+        <button type="button" class="btn btn-link">link</button>
+
+        <br />
+        <br />
+        <!-- outline button -->
+        <button type="button" class="btn btn-outline-primary">Primary</button>
+        <button type="button" class="btn btn-outline-secondary">
+            Secondary
+        </button>
+        <button type="button" class="btn btn-outline-success">Success</button>
+        <button type="button" class="btn btn-outline-danger">Danger</button>
+        <button type="button" class="btn btn-outline-warning">Warning</button>
+        <button type="button" class="btn btn-outline-info">Info</button>
+        <button type="button" class="btn btn-outline-light">Light</button>
+        <button type="button" class="btn btn-outline-dark">Dark</button>
+
+        <br />
+        <br />
+
+        <!-- collapse -->
+        <h2>collapse</h2>
+        <!-- 수평, 수직으로 열리는 방식이 있음 -->
+        <!-- 수직 -->
+        <!-- a 태그 활용한 버튼 -->
+        <a
+            class="btn btn-primary"
+            data-bs-toggle="collapse"
+            href="#collapseExample"
+            role="button"
+            aria-expanded="false"
+            aria-controls="collapseExample"
+        >
+            Link with href
+        </a>
+        <!-- 버튼 태그 활요한 버튼 -->
+        <button
+            class="btn btn-primary"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseExample"
+            aria-expanded="false"
+            aria-controls="collapseExample"
+        >
+            Button with data-bs-target
+        </button>
+        <!-- id="collapseExample" 는 위에 aria-controls="collapseExample" 와 연결되어 클릭하면 아래가 열림 -->
+        <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+                Some placeholder content for the collapse component. This panel
+                is hidden by default but revealed when the user activates the
+                relevant trigger.
+            </div>
+        </div>
+        <br />
+        <!-- 수평 -->
+        <p>
+            <!-- 
+                aria-xx란?
+                    - 접두사가 aria인 특성은 **접근성**이나 **스크린 리더**와 관련 있음
+                    - aria-expanded="true" : 숨김
+                    - aria-label="Close" : 스크린 리더가 label을 close를 갖도록 함
+                    - role="alert" : 스크린 리더에게 중요한 정보라는 것을 표시 
+             -->
+            <button
+                class="btn btn-primary"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseWidthExample"
+                aria-expanded="false"
+                aria-controls="collapseWidthExample"
+            >
+                Toggle width collapse
+            </button>
+        </p>
+        <div style="min-height: 120px">
+            <div class="collapse collapse-horizontal" id="collapseWidthExample">
+                <div class="card card-body" style="width: 300px">
+                    This is some placeholder content for a horizontal collapse.
+                    It's hidden by default and shown when triggered.
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+
+        <!-- accodion -->
+        <h2>accordion</h2>
+
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                    >
+                        원하는 제목 작성하기
+                    </button>
+                </h2>
+                <div
+                    id="collapseOne"
+                    class="accordion-collapse collapse show"
+                    data-bs-parent="#accordionExample"
+                >
+                    <div class="accordion-body">
+                        .accordion-body 요소에 원하는 긴 문단을 작성해서
+                        보였다가 안보였다가 할 수 있음.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                    >
+                        이거 따라해주세용!
+                    </button>
+                </h2>
+                <div
+                    id="collapseTwo"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionExample"
+                >
+                    <div class="accordion-body">요로케 조로케!</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                    >
+                        아이템의 갯수를 늘리고 싶다면?
+                    </button>
+                </h2>
+                <div
+                    id="collapseThree"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionExample"
+                >
+                    <div class="accordion-body">
+                        .accordion-item 요소를 더 추가해 주세요!
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                    >
+                        Accordion Item #4
+                    </button>
+                </h2>
+                <div
+                    id="collapseThree"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionExample"
+                >
+                    <div class="accordion-body">
+                        <strong
+                            >This is the third item's accordion body.</strong
+                        >
+                        It is hidden by default, until the collapse plugin adds
+                        the appropriate classes that we use to style each
+                        element. These classes control the overall appearance,
+                        as well as the showing and hiding via CSS transitions.
+                        You can modify any of this with custom CSS or overriding
+                        our default variables. It's also worth noting that just
+                        about any HTML can go within the
+                        <code>.accordion-body</code>, though the transition does
+                        limit overflow.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                    >
+                        Accordion Item #5
+                    </button>
+                </h2>
+                <div
+                    id="collapseThree"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionExample"
+                >
+                    <div class="accordion-body">
+                        <strong
+                            >This is the third item's accordion body.</strong
+                        >
+                        It is hidden by default, until the collapse plugin adds
+                        the appropriate classes that we use to style each
+                        element. These classes control the overall appearance,
+                        as well as the showing and hiding via CSS transitions.
+                        You can modify any of this with custom CSS or overriding
+                        our default variables. It's also worth noting that just
+                        about any HTML can go within the
+                        <code>.accordion-body</code>, though the transition does
+                        limit overflow.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br />
+        <!-- badge -->
+        <h2>badge</h2>
+        <div>
+            아메리카노
+            <span class="badge text-bg-primary">New!</span>
+            <span class="badge text-bg-danger">hot</span>
+        </div>
+        <span class="badge text-bg-primary">Primary</span>
+        <span class="badge text-bg-secondary">Secondary</span>
+        <span class="badge text-bg-success">Success</span>
+        <span class="badge text-bg-danger">Danger</span>
+        <span class="badge text-bg-warning">Warning</span>
+        <span class="badge text-bg-info">Info</span>
+        <span class="badge text-bg-light">Light</span>
+        <span class="badge text-bg-dark">Dark</span>
+
+        <br />
+        <button type="button" class="btn btn-primary position-relative">
+            알림
+            <span
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+            >
+                99+
+                <span class="visually-hidden">unread messages</span>
+            </span>
+        </button>
+
+        <br />
+        <br />
+
+        <!-- card -->
+        <h2>card</h2>
+        <!-- 이렇게 해도 되고,  <section class="container"> 로 부트스트렙에 정의된 클래스 말고 따로 줘서 css 속성 따로 줘도 됨 -->
+        <section class="d-flex">
+            <div class="card" style="width: 18rem">
+                <img
+                    src="../02_css/img/beach1.jpg"
+                    class="card-img-top"
+                    alt="바다"
+                />
+                <div class="card-body">
+                    <h5 class="card-title">도자기 텀블러</h5>
+                    <p class="card-text">
+                        가지고 다니면 깨질 위험이 매우 높은 세상에 없는
+                        센세이셔널한 텀블러
+                    </p>
+                    <p class="card-text">9,800</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem">
+                <img
+                    src="../02_css/img/beach1.jpg"
+                    class="card-img-top"
+                    alt="바다"
+                />
+                <div class="card-body">
+                    <h5 class="card-title">도자기 텀블러</h5>
+                    <p class="card-text">
+                        가지고 다니면 깨질 위험이 매우 높은 세상에 없는
+                        센세이셔널한 텀블러
+                    </p>
+                    <p class="card-text">9,800</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem">
+                <img
+                    src="../02_css/img/beach1.jpg"
+                    class="card-img-top"
+                    alt="바다"
+                />
+                <div class="card-body">
+                    <h5 class="card-title">도자기 텀블러</h5>
+                    <p class="card-text">
+                        가지고 다니면 깨질 위험이 매우 높은 세상에 없는
+                        센세이셔널한 텀블러
+                    </p>
+                    <p class="card-text">9,800</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </section>
+
+        <br />
+        <br />
+        <!-- carousel -->
+        <h2>carousel</h2>
+        <!--             
+            data-bs-ride="carousel", data-bs-interval="초(단위 천 ex, 1000 = 1초)" 사용 시 자동으로 이미지 넘어감-->
+
+        <div
+            id="carouselExample"
+            class="carousel slide"
+            data-bs-ride="carousel"
+            data-bs-interval="1000"
+        >
+            <div class="carousel-inner">
+                <!-- active 가 있는 것 부터 순서대로 실행 / 사용이유 : 부트스트랩에게 친절하게 알려주기 위해 active를 넣어주는 것임 -->
+                <div class="carousel-item active">
+                    <img
+                        src="../02_css/img/beach1.jpg"
+                        class="d-block w-100"
+                        alt="바다 사진1"
+                    />
+                </div>
+                <div class="carousel-item">
+                    <img
+                        src="../02_css/img/beach2.jpg"
+                        class="d-block w-100"
+                        alt="바다 사진2"
+                    />
+                </div>
+                <div class="carousel-item">
+                    <img
+                        src="../02_css/img/beach3.jpg"
+                        class="d-block w-100"
+                        alt="바다 사진3"
+                    />
+                </div>
+            </div>
+            <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExample"
+                data-bs-slide="prev"
+            >
+                <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExample"
+                data-bs-slide="next"
+            >
+                <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <br />
+        <br />
+
+        <!-- offcanvas (슬라이드 메뉴 같은 것) -->
+        <h2>offcanvas</h2>
+        <!-- 
+            버튼이 없어서 페이지 실행되자마자 나타남(버튼이 필요)
+            <div
+            class="offcanvas offcanvas-start show"
+            tabindex="-1"
+            id="offcanvas"
+            aria-labelledby="offcanvasLabel"
+        >
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasLabel">Offcanvas</h5>
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                ></button>
+            </div>
+            <div class="offcanvas-body">
+                Content for the offcanvas goes here. You can place just about
+                any Bootstrap component or custom elements here.
+            </div>
+        </div> 
+        -->
+
+        <!-- 버튼을 클릭시 나타남 -->
+        <!-- 1. a태그를 활용하여 버튼 만든 예시 -->
+        <a
+            class="btn btn-primary"
+            data-bs-toggle="offcanvas"
+            href="#offcanvasExample"
+            role="button"
+            aria-controls="offcanvasExample"
+        >
+            Link with href
+        </a>
+
+        <!-- 2. 버튼 태그 활용하여 버튼 만든 예시 -->
+        <button
+            class="btn btn-primary"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasExample"
+            aria-controls="offcanvasExample"
+        >
+            Button with data-bs-target
+        </button>
+
+        <div
+            class="offcanvas offcanvas-start"
+            tabindex="-1"
+            id="offcanvasExample"
+            aria-labelledby="offcanvasExampleLabel"
+        >
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+                    제목 작성해주기
+                </h5>
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                ></button>
+            </div>
+            <div class="offcanvas-body">
+                <div>내용 작성해주기</div>
+                <div>내용 작성해주기</div>
+                <div>내용 작성해주기</div>
+                <div>내용 작성해주기</div>
+                <div>내용 작성해주기</div>
+                <div class="dropdown mt-3">
+                    <button
+                        class="btn btn-secondary dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                    >
+                        Dropdown button
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li>
+                            <a class="dropdown-item" href="#">Another action</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#"
+                                >Something else here</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <br />
+
+        <!-- navbar -->
+        <h2>navbar</h2>
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">logo</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div
+                    class="collapse navbar-collapse"
+                    id="navbarSupportedContent"
+                >
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a
+                                class="nav-link active"
+                                aria-current="page"
+                                href="#"
+                                >Home</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                드롭다운 제목
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="#"
+                                        >드롭다운 세부 내용1</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#"
+                                        >드롭다운 세부 내용2</a
+                                    >
+                                </li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li>
+                                    <a class="dropdown-item" href="#"
+                                        >Something else here</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true"
+                                >Disabled</a
+                            >
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input
+                            class="form-control me-2"
+                            type="search"
+                            placeholder="Search"
+                            aria-label="Search"
+                        />
+                        <button class="btn btn-outline-success" type="submit">
+                            Search
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </body>
+</html>

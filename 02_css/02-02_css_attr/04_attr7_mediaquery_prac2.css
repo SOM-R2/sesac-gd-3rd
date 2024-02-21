@@ -12,12 +12,8 @@ ol {
     line-height: 100px;
 }
 
-.menu li {
-    font-weight: 700;
-    padding: 0 10px;
-    cursor: pointer;
-}
 header {
+    /* 내 부모 요소를 100분율로 사용 */
     width: 100%;
     height: 100px;
     background-color: lightblue;
@@ -33,13 +29,30 @@ header .inner {
 }
 
 header .inner .logo {
-    line-height: 100px;
     /* absolute를 하는 이유 : 요소 쌓인 순서에서 벗어나게 해서 li 메뉴들과 분리 해서 위치 고정 시킴 */
     /* 메뉴 들은 정중앙에 위치하게 하기 위해 logo는 포지션 앱솔루트 줌! */
     position: absolute;
     /* i는 font-size로 크기 조절 */
     font-size: 50px;
+    line-height: 100px;
     color: aliceblue;
+    cursor: pointer;
+}
+/* 강사님 답 */
+
+/* header .inner .menu {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .inner .menu li {
+    margin-right: 20px;
+} */
+
+.menu li {
+    font-weight: 700;
+    padding: 0 10px;
     cursor: pointer;
 }
 
@@ -78,4 +91,37 @@ header .inner .logo {
         background-color: lightblue;
         cursor: pointer;
     }
+
+    /* 강사님 답 */
+    /* header .inner .logo {
+        left: calc(50% - 25px);
+    }
+
+    header .menu-bar {
+        position: absolute;
+        font-size: 30px;
+        line-height: 100px;
+        right: 5%;
+    }
+
+    header .small-menu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header .small-menu li {
+        background-color: aliceblue;
+        height: 60px;
+        text-align: center;
+        line-height: 60px;
+        cursor: pointer;
+    }
+
+    header .small-menu li:hover {
+        background-color: rgb(0, 55, 102);
+        color: white;
+    }
+    header .inner .menu {
+        display: none;
+    } */
 }
