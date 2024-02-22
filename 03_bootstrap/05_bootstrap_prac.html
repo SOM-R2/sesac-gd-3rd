@@ -4,6 +4,557 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>bootstrap 웹 페이지 만들기 실습</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+            crossorigin="anonymous"
+        />
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"
+        ></script>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        />
+        <link rel="stylesheet" href="./05_bootstrap_prac.css" />
     </head>
-    <body></body>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarTogglerDemo01"
+                        aria-controls="navbarTogglerDemo01"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div
+                        class="collapse navbar-collapse"
+                        id="navbarTogglerDemo01"
+                    >
+                        <a class="navbar-brand" href="#"
+                            ><i class="bi bi-door-open-fill"></i
+                        ></a>
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item dropdown">
+                                <a
+                                    class="nav-link dropdown-toggle"
+                                    href="#"
+                                    role="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                >
+                                    랭킹
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item" href="#"
+                                            >지역별</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#"
+                                            >테마별</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#"
+                                            >가격별</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#"
+                                            >자유게시판</a
+                                        >
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">회원가입</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">로그인</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <form class="d-flex" role="search">
+                        <input
+                            class="form-control me-2"
+                            type="search"
+                            placeholder="Search"
+                            aria-label="Search"
+                        />
+                        <button class="btn btn-outline-success" type="submit">
+                            Search
+                        </button>
+                    </form>
+                </div>
+            </nav>
+        </header>
+        <container>
+            <section>
+                <div
+                    id="carouselExampleCaptions"
+                    class="carousel slide"
+                    data-bs-ride="carousel"
+                >
+                    <div class="carousel-indicators">
+                        <button
+                            type="button"
+                            data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide-to="0"
+                            class="active"
+                            aria-current="true"
+                            aria-label="Slide 1"
+                        ></button>
+                        <button
+                            type="button"
+                            data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide-to="1"
+                            aria-label="Slide 2"
+                        ></button>
+                        <button
+                            type="button"
+                            data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide-to="2"
+                            aria-label="Slide 3"
+                        ></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div
+                            class="carousel-item active"
+                            data-bs-interval="3000"
+                        >
+                            <img
+                                src="./img/ticket.png"
+                                class="d-block w-100"
+                                alt="갤럭시 익스프레스"
+                            />
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Galaxy Express(티켓투이스케이프)</h5>
+                                <p>
+                                    #티켓투이스케이프🎟 갤럭시 익스프레스 기차
+                                    출발합니다.🚂
+                                </p>
+                                <p>시간 : 20~40분(타임어택)</p>
+                                <p>난이도 : ⭐️⭐️⭐️⭐️</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img
+                                src="./img/alive.jpg"
+                                class="d-block w-100"
+                                alt="alive"
+                            />
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>alive(제로월드 홍대점)</h5>
+                                <p>
+                                    Humankind must put an end to war, or war
+                                    will put an end to humankind (인류가 전쟁을
+                                    끝내지 않으면, 전쟁이 인류를 끝낼 것이다)
+                                </p>
+                                <p>시간 : 80분</p>
+                                <p>난이도 : ⭐️⭐️⭐️</p>
+                                <p>
+                                    ※ 최소 인원 3인 / 최대 인원 4인 ※ 활동성이
+                                    매우 높습니다. 편한 복장 추천드립니다.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img
+                                src="./img/monday.jpg"
+                                class="d-block w-100"
+                                alt="monday night"
+                            />
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>MONDAY NIGHT(에필로그)</h5>
+                                <p>월요일 밤, 나는 꿈을 꾸러 간다.</p>
+                                <p>시간 : 80분</p>
+                                <p>난이도 : ⭐️⭐️⭐️</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button
+                        class="carousel-control-prev"
+                        type="button"
+                        data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="prev"
+                    >
+                        <span
+                            class="carousel-control-prev-icon"
+                            aria-hidden="true"
+                        ></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button
+                        class="carousel-control-next"
+                        type="button"
+                        data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="next"
+                    >
+                        <span
+                            class="carousel-control-next-icon"
+                            aria-hidden="true"
+                        ></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </section>
+            <main>
+                <section>
+                    <h4 class="recomend">지역별 추천 순위</h4>
+                    <nav class="recomend">
+                        <button
+                            type="button"
+                            class="btn btn-outline-secondary prev"
+                        >
+                            <i class="bi bi-chevron-left"></i>
+                        </button>
+                        <span class="btn-group1">
+                            <button
+                                type="button"
+                                class="btn btn-outline-secondary active"
+                            >
+                                전체
+                            </button>
+                            <button
+                                type="button"
+                                class="btn btn-outline-secondary"
+                            >
+                                홍대
+                            </button>
+                            <button
+                                type="button"
+                                class="btn btn-outline-secondary"
+                            >
+                                강남
+                            </button>
+                            <button
+                                type="button"
+                                class="btn btn-outline-secondary"
+                            >
+                                건대
+                            </button>
+                            <button
+                                type="button"
+                                class="btn btn-outline-secondary"
+                            >
+                                신촌
+                            </button>
+                            <button
+                                type="button"
+                                class="btn btn-outline-secondary"
+                            >
+                                대학로
+                            </button>
+                            <button
+                                type="button"
+                                class="btn btn-outline-secondary"
+                            >
+                                잠실
+                            </button>
+                            <button
+                                type="button"
+                                class="btn btn-outline-secondary"
+                            >
+                                신림
+                            </button>
+                            <button
+                                type="button"
+                                class="btn btn-outline-secondary"
+                            >
+                                노원
+                            </button>
+                            <button
+                                type="button"
+                                class="btn btn-outline-secondary"
+                            >
+                                서울(기타)
+                            </button>
+                        </span>
+                        <span class="btn-group2">
+                            <button
+                                type="button"
+                                class="btn btn-outline-secondary"
+                            >
+                                인천
+                            </button>
+                            <button
+                                type="button"
+                                class="btn btn-outline-secondary"
+                            >
+                                수원
+                            </button>
+                            <button
+                                type="button"
+                                class="btn btn-outline-secondary"
+                            >
+                                성남
+                            </button>
+                            <button
+                                type="button"
+                                class="btn btn-outline-secondary"
+                            >
+                                일산
+                            </button>
+                            <button
+                                type="button"
+                                class="btn btn-outline-secondary"
+                            >
+                                부천
+                            </button>
+                            <button
+                                type="button"
+                                class="btn btn-outline-secondary"
+                            >
+                                의정부
+                            </button>
+                            <button
+                                type="button"
+                                class="btn btn-outline-secondary"
+                            >
+                                평택
+                            </button>
+                            <button
+                                type="button"
+                                class="btn btn-outline-secondary"
+                            >
+                                안산
+                            </button>
+                            <button
+                                type="button"
+                                class="btn btn-outline-secondary"
+                            >
+                                동탄
+                            </button>
+                            <button
+                                type="button"
+                                class="btn btn-outline-secondary"
+                            >
+                                경기(기타)
+                            </button>
+                        </span>
+                        <button
+                            type="button"
+                            class="btn btn-outline-secondary next"
+                        >
+                            <i class="bi bi-chevron-right"></i>
+                        </button>
+                    </nav>
+                    <article>
+                        <button class="add">더보기</button>
+                        <div
+                            class="card position-relative"
+                            style="width: 18rem"
+                        >
+                            <img
+                                src="./img/alive.jpg"
+                                class="card-img-top"
+                                alt="alive"
+                            />
+                            <i
+                                class="bi bi-bookmark-star position-absolute top-0 end-0"
+                            ></i>
+                            <span class="visually-hidden">추천 배지</span>
+
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    alive(제로월드 홍대점)
+                                </h5>
+                                <p>
+                                    Humankind must put an end to war, or war
+                                    will put an end to humankind (인류가 전쟁을
+                                    끝내지 않으면, 전쟁이 인류를 끝낼 것이다)
+                                </p>
+                                <p>시간 : 80분</p>
+                                <p>난이도 : ⭐️⭐️⭐️</p>
+                                <p>
+                                    ※ 최소 인원 3인 / 최대 인원 4인 ※ 활동성이
+                                    매우 높습니다. 편한 복장 추천드립니다.
+                                </p>
+                                <a href="#" class="btn btn-primary"
+                                    >예약하러가기</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="card position-relative"
+                            style="width: 18rem"
+                        >
+                            <img
+                                src="./img/monday.jpg"
+                                class="card-img-top"
+                                alt="alive"
+                            />
+                            <i
+                                class="bi bi-bookmark-star position-absolute top-0 end-0"
+                            ></i>
+                            <span class="visually-hidden">추천 배지</span>
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    MONDAY NIGHT(에필로그)
+                                </h5>
+                                <p>월요일 밤, 나는 꿈을 꾸러 간다.</p>
+                                <p>시간 : 80분</p>
+                                <p>난이도 : ⭐️⭐️⭐️</p>
+                                <a href="#" class="btn btn-primary"
+                                    >예약하러가기</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="card position-relative"
+                            style="width: 18rem"
+                        >
+                            <img
+                                src="./img/ticket.png"
+                                class="card-img-top"
+                                alt="alive"
+                            />
+                            <i
+                                class="bi bi-bookmark-star position-absolute top-0 end-0"
+                            ></i>
+                            <span class="visually-hidden">추천 배지</span>
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    Galaxy Express(티켓투이스케이프)
+                                </h5>
+                                <p>
+                                    #티켓투이스케이프🎟 갤럭시 익스프레스 기차
+                                    출발합니다.🚂
+                                </p>
+                                <p>시간 : 20~40분(타임어택)</p>
+                                <p>난이도 : ⭐️⭐️⭐️⭐️</p>
+                                <a href="#" class="btn btn-primary"
+                                    >예약하러가기</a
+                                >
+                            </div>
+                        </div>
+                    </article>
+                </section>
+                <section class="new">
+                    <h4>신규테마 추천</h4>
+                    <button class="add">더보기</button>
+                    <article>
+                        <div
+                            class="card mb-3"
+                            style="max-width: 540px; height: 315px"
+                        >
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img
+                                        src="./img/summer.png"
+                                        class="img-fluid rounded-start"
+                                        alt="바야흐로 여름이었다 이미지"
+                                        style="height: 315px"
+                                    />
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5
+                                            class="card-title position-relative"
+                                        >
+                                            바야흐로,여름이었다.(드림이스케이프)
+                                        </h5>
+                                        <p class="card-text">
+                                            라디오 DJ: 자~ 오늘도 돌아온
+                                            영디오빠에요. 오늘은 순화마을에서
+                                            사연이 도착했네요. 순화마을? 어?
+                                            많이 들어봤는데? 굉장히 짧네요. 자
+                                            그럼 이제 읽어볼게요. "김미영, 나
+                                            잊은 거 아니지...?" 바야흐로
+                                            여름이었다.
+                                        </p>
+                                        <p>난이도 : ⭐️⭐️⭐️</p>
+                                        <p>시간 : 80분</p>
+                                        <p
+                                            class="card-text text-end"
+                                            id="booking"
+                                        >
+                                            <a href="#" class="btn btn-primary"
+                                                >예약하러가기</a
+                                            >
+                                            <small class="text-body-secondary"
+                                                >2024-02-22</small
+                                            >
+                                        </p>
+                                    </div>
+                                    <span
+                                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                                    >
+                                        미스터리
+                                        <span class="visually-hidden"
+                                            >장르</span
+                                        >
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="card mb-3"
+                            style="max-width: 540px; height: 315px"
+                        >
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img
+                                        src="./img/jack.jpg"
+                                        class="img-fluid rounded-start"
+                                        alt="JACK IN THE SHOW 이미지"
+                                        style="height: 315px"
+                                    />
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5
+                                            class="card-title position-relative"
+                                        >
+                                            JACK IN THE SHOW(포인트나인 건대점)
+                                        </h5>
+                                        <p class="card-text">
+                                            내 이름은 John. JACK IN THE SHOW에
+                                            들어 온지도 어느덧 3년째… 난 언제쯤
+                                            무대에 설 수 있을까?
+                                        </p>
+                                        <p>난이도 : ⭐️⭐️</p>
+                                        <p class="time">시간 : 75분</p>
+                                        <p
+                                            class="card-text text-end"
+                                            id="booking"
+                                        >
+                                            <a href="#" class="btn btn-primary"
+                                                >예약하러가기</a
+                                            >
+                                            <small class="text-body-secondary"
+                                                >2024-02-22</small
+                                            >
+                                        </p>
+                                    </div>
+                                    <span
+                                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark"
+                                    >
+                                        다크 판다지
+                                        <span class="visually-hidden"
+                                            >장르</span
+                                        >
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+            </main>
+        </container>
+        <footer>
+            <p class="p-4">bootstrap을 활용해 만든 페이지 입니다.</p>
+        </footer>
+    </body>
 </html>

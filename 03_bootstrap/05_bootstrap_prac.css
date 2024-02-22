@@ -1,0 +1,100 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    width: 100vw;
+    height: 64px;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    z-index: 999;
+}
+
+.navber {
+    justify-content: center;
+}
+main {
+    margin-top: 1.5rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-bottom: 10rem;
+}
+
+.btn-group2 {
+    display: none;
+}
+
+article {
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bi-bookmark-star {
+    font-size: 40px;
+    color: gold;
+}
+
+.carousel-item > img {
+    height: 1000px;
+}
+
+.carousel-caption > * {
+    display: none;
+}
+
+.carousel-item > img:hover + .carousel-caption > * {
+    display: block;
+    padding-bottom: 5px;
+}
+
+.carousel-item > img:hover {
+    opacity: 70%;
+}
+
+.next,
+.prev {
+    border: none;
+    background-color: white;
+}
+
+.add {
+    position: absolute;
+    right: 10vw;
+    border: none;
+    background-color: white;
+}
+
+.card {
+    margin: 30px;
+}
+.card > img {
+    height: 400px;
+}
+
+.card-body {
+    height: 400px;
+}
+.time {
+    margin-bottom: 50px;
+}
+#booking {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    width: 100%;
+    height: 80px;
+    border-top: 1px solid black;
+    background-color: rgb(246, 245, 245);
+    color: gray;
+}
