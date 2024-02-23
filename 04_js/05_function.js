@@ -99,3 +99,18 @@ hello('layla'); // Hello! layla를 alert창에 보여줌
 
 const username = 'layla';
 hello(username); // 얘도 마찬가지로 Hello! layla를 alert창에 보여줌
+
+// 실습 함수 만들기 1
+function multifly(n1, n2) {
+    return n1 * n2;
+}
+console.log(multifly(3, 7));
+console.log(multifly(2, 2));
+
+// 실습 함수 만들기 2
+const square = function (n3) {
+    console.log(n3 ** 2);
+};
+
+square(4);
+square(11);
