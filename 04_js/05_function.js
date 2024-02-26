@@ -114,3 +114,25 @@ const square = function (n3) {
 
 square(4);
 square(11);
+
+// 강사님 답
+//multifly 함수 만들기
+function multifly(num1, num2) {
+    return num1 * num2;
+    // 매개변수 확인하는 콘솔
+    // console.log('num1 : ', num1);
+    // console.log('num2 : ', num2);
+
+    // return문 아래에는 어떤걸 작성해도 실행이 안됨
+    console.log('aa'); // return문 다음 코드는 실행하지 않음
+}
+
+console.log(multifly(3, 7));
+
+// square 함수 만들기
+// 매개 변수 이름은 겹쳐도 상관 없음
+function square(num) {
+    return num ** 2;
+}
+
+console.log(square(4));
