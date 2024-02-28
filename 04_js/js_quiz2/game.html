@@ -1,0 +1,135 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>숫자 Up and Down 게임</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Sans+Mono:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet" />
+
+    <style>
+      code {
+        display: inline-block;
+        margin: 1px 0;
+        padding: 2px;
+        border-radius: 3px;
+        background-color: #ededed;
+        font-family: 'Noto Sans Mono', monospace;
+        font-weight: 500;
+      }
+
+      p {
+        padding: 10px 20px;
+        background-color: rgb(248, 255, 230);
+        border-radius: 10px;
+      }
+
+      b {
+        color: #263cff;
+      }
+
+      li {
+        margin: 4px 0;
+      }
+
+      button {
+        animation-name: moveUpDown;
+        animation-duration: 0.4s;
+        animation-iteration-count: 8;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+        cursor: pointer;
+      }
+
+      @keyframes moveUpDown {
+        from {
+          transform: translateY(-3px);
+        }
+        to {
+          transform: translateY(3px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>숫자 Up and Down 게임</h1>
+    <div>
+      [게임 시작하기] 버튼을 클릭하면 <code>startGame()</code>함수가 실행(호출)되도록 미리 설정했습니다. 아래 조건을
+      만족하도록 <code>startGame()</code>함수를 내부 코드를 채워주세요.
+    </div>
+    <ul>
+      <li><code>prompt()</code>함수와 <code>alert()</code>를 이용해 <b>숫자 Up and Down 게임</b>을 만들어볼까요?</li>
+      <li>
+        정답 숫자를 저장하는 변수
+        <b><code>answer</code>의 값은 Math.random() 메소드를 이용해서 <code>0 &lt; x &lt;= 10 까지의 수</code></b> 로
+        설정해주세요
+      </li>
+      <li><code>while</code> 반복문은 <b>계속해서 반복</b>됩니다.</li>
+      <li>
+        변수 <b><code>guessValue</code></b
+        >에는 <b><code>prompt()</code>함수를 이용해 사용자가 추측한 값이 저장</b>됩니다.<br />
+        <code>let guessValue = prompt('UP and DOWN 게임을 시작합니다!');</code>라고 코드를 작성하면 프롬프트에 사용자가
+        입력한 값이 <code>guessValue</code> 변수에 "문자열"로 저장됩니다.
+      </li>
+      <li>
+        만약에 사용자가 추측한 값이 "q" 또는 "포기"였다면, 게임이 종료되고
+        <code>alert()</code>함수로 <b>"포기하셨습니다.."</b> 창이 나타납니다. 그리고 <b>반복이 종료</b>됩니다.
+      </li>
+      <li>
+        만약에 사용자가 추측한 값이 정답과 같다면, <code>alert()</code>함수로
+        <b>(만약에 random()수가 10이었다면) "10!! 정답입니다!" </b> 창이 나타납니다. 그리고 <b>반복이 종료</b>됩니다.
+      </li>
+      <li>
+        만약에 사용자가 추측한 값이 정답보다 크다면, <code>alert()</code>함수로 <b>"Down"</b> 창이 나타납니다. alert창의
+        [확인] 버튼을 누르면 <b>다음 반복으로 넘어가</b> prompt 대화창이 나타납니다.
+      </li>
+      <li>
+        만약에 사용자가 추측한 값이 정답보다 작다면, <code>alert()</code>함수로 <b>"Up"</b> 창이 나타납니다. alert창의
+        [확인] 버튼을 누르면 <b>다음 반복으로 넘어가</b> prompt 대화창이 나타납니다.
+      </li>
+      <li>Slack에 실행 영상을 참고해주세요!</li>
+
+      <br /><br />
+      <button onclick="startGame();">게임 시작하기</button>
+    </ul>
+    <br />
+    <p>
+      (힌트) 이 문제는 "계속해서 반복"하는 것이 포인트입니다. 즉, 무한루프를 이용해야 합니다. <br /><br />
+      (힌트) 사용자가 게임을 포기했거나 정답을 맞춘 경우, 무한루프를 탈출합니다.
+      <br /><br />
+      (힌트)
+      <a target="_blank" href="https://developer.mozilla.org/ko/docs/Web/API/Window/prompt#%EB%B0%98%ED%99%98_%EA%B0%92"
+        >MDN 사이트 이동 (prompt 함수 반환값)</a
+      >
+    </p>
+      (힌트) 이 문제는 "계속해서 반복"하는 것이 포인트입니다. 즉, 무한루프를 이용해야 합니다. <br /><br />
+      (힌트) 사용자가 게임을 포기했거나 정답을 맞춘 경우, 무한루프를 탈출합니다.
+      <a
+        target="_blank"
+        href="https://velog.io/@judylia/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-9-while-%EB%B0%98%EB%B3%B5%EB%AC%B8-for-%EB%B0%98%EB%B3%B5%EB%AC%B8-break-continue-%EC%A4%91%EC%B2%A9-%EB%B0%98%EB%B3%B5%EB%AC%B8#3-break"
+        >무한루프 탈출하기</a
+      >
+      <br /><br />
+      (힌트)
+      <a target="_blank" href="https://developer.mozilla.org/ko/docs/Web/API/Window/prompt#%EB%B0%98%ED%99%98_%EA%B0%92"
+        >MDN 사이트 이동 (prompt 함수 반환값)</a
+      >
+    </p>
+
+    <script>
+      const answer = Math.random();
+      function startGame() {
+        console.log('버튼을 클릭하셨군요! 게임을 시작합니다.');
+        // TODO: [게임 시작하기] 버튼을 누르면 startGame() 함수가 실행되도록 설정해두었습니다. 함수 내부 코드를 채워주세요
+      }
+
+    </script>
+  </body>
+</html>
