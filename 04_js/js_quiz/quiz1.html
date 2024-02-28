@@ -100,8 +100,16 @@
         <h2>Q6. 다음 중 변수를 올바르게 선언한 것은?</h2>
         <ol>
             <li><code>v userId;</code></li>
-            <li class="check"><code>const userId;</code></li>
-            <li><code>let userId;</code></li>
+            <!-- 틀림, const 선언하면서 무조건 할당을 해줘야 하기 때문에 -->
+            <li class="check">
+                <code>const userId; 틀린 답 (주석 참고)</code>
+            </li>
+            <li>
+                <code
+                    >let userId; // 정답(할당하지 않아도 사용가능, undefined값
+                    들어감)</code
+                >
+            </li>
             <li><code>string userId;</code></li>
         </ol>
         <hr />
@@ -144,9 +152,13 @@
         <h2>Q11. 다음 대화창을 출력하는 함수는 무엇인가?</h2>
         <img src="./image/img2.png" alt="보기" />
         <ol>
-            <li class="check"><code>alert('아이디는?')</code></li>
+            <!-- 대화 창이 아닌 창을 뛰움? -->
+            <li class="check">
+                <code>alert('아이디는?') 틀린 답, (주석 참고)</code>
+            </li>
             <li><code>window('아이디는?')</code></li>
-            <li><code>prompt('아이디는?')</code></li>
+            <li><code>prompt('아이디는?') // 정답</code></li>
+            <!-- alert과 비슷한데 확인과 취소버튼이 있음 -->
             <li><code>confirm('아이디는?')</code></li>
         </ol>
         <hr />
@@ -163,12 +175,14 @@
             <li><code>*USER3</code></li>
             <li><code>USER_</code></li>
             <li><code>let</code></li>
-            <li><code>_</code></li>
+            <!-- 되긴하지만 사용하지 않음 -->
+            <li class="check"><code>_</code></li>
             <li><code>*</code></li>
-            <li><code>$</code></li>
+            <!-- 되긴하지만 사용하지 않음 -->
+            <li class="check"><code>$</code></li>
             <li><code>new user</code></li>
             <li class="check"><code>new_user</code></li>
-            <li><code>$new_user</code></li>
+            <li class="check"><code>$new_user</code></li>
             <li><code>const</code></li>
         </ol>
         <hr />
@@ -213,8 +227,10 @@
         <h2>Q17. 다음 중 결과가 다른 하나는?</h2>
         <ol>
             <li class="check"><code>3 !== '3'</code></li>
+            <!-- 숫자 4는 숫자 4와 같지 않은가? - false -->
             <li><code>(8 / '2') !== 4</code></li>
             <li><code>0 === false</code></li>
+            <!-- 문자열 12을 반환 -->
             <li><code>('1' + 2) === 12</code></li>
         </ol>
         <hr />

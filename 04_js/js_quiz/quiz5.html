@@ -75,7 +75,9 @@
         <p>(힌트) 조건이 중첩되어 있습니다!</p>
 
         <script>
+            // TODO: 조건을 만족하는 diceNumber 함수를 완성해주세요.
             function diceNumber(first, second) {
+                // typeof로 자료형을 검사하게 되면 해당 변수의 자료형을 문자형 형식으로 값을 반환
                 if (typeof first === 'number' && typeof second === 'number') {
                     if (parseInt((first + second) % 4) === 0) {
                         console.log('4의 배수');
@@ -85,8 +87,25 @@
                 } else {
                     console.log('Not a Number');
                 }
-                // TODO: 조건을 만족하는 diceNumber 함수를 완성해주세요.
             }
+
+            // 강사님 답
+            function diceNumber(first, second) {
+                if (typeof first === 'number' && typeof second === 'number') {
+                    const result = first + second;
+                    if (result % 4 === 0) {
+                        console.log('4의 배수');
+                    } else {
+                        console.log('4의 배수가 아님');
+                    }
+                } else {
+                    console.log('Not a Number');
+                }
+            }
+
+            // 추가
+            // isNaN(aa);  -> true;
+            // isNan('1');  -> false가 나와야할것같지만 자기 마음대로 숫자형으로 변환해서 숫자인지 아닌지를 확인하기 때문에 false;
 
             // TODO: 해당 html 파일을 실행한 브라우저 콘솔창에서 diceNumber 함수를 호출해주세요!
             diceNumber(1, 2);
