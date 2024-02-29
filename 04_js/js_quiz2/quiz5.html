@@ -121,13 +121,16 @@
                 for (let i = 0; i < lines; i++) {
                     console.log(' '.repeat(lines - i) + '*'.repeat(i * 2 + 1));
                 }
-                for (let j = 0; j < lines * 2 - 1; j++) {
-                    console.log(' '.repeat(j * 2 + 1) + '*'.repeat(lines - j));
+                for (let j = lines - 2; j >= 0; j--) {
+                    console.log(' '.repeat(lines - j) + '*'.repeat(2 * j + 1));
                 }
             }
 
             function drawStars5(lines) {
                 // TODO: drawStars5() 함수 내부 코드를 채워주세요.
+                for (let i = 0; i < lines; i++) {
+                    console.log(' '.repeat(lines - i) + '*'.repeat(lines));
+                }
             }
 
             // TODO: 해당 html 파일을 실행한 브라우저 콘솔창에서 drawStars ~ drawStars5 함수를 호출해주세요!
@@ -141,10 +144,10 @@
             //  drawStars3(5);
 
             // drawStars4(3);
-            drawStars4(5);
+            // drawStars4(5);
 
             // drawStars5(3);
-            // drawStars5(5);
+            drawStars5(5);
         </script>
     </body>
 </html>
