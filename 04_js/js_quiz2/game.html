@@ -128,10 +128,28 @@
       function startGame() {
         console.log('버튼을 클릭하셨군요! 게임을 시작합니다.');
         // TODO: [게임 시작하기] 버튼을 누르면 startGame() 함수가 실행되도록 설정해두었습니다. 함수 내부 코드를 채워주세요
-        let guessValue = prompt ("UP and Down 게임을 시작합니다!");
         // console.log(guessValue);
-        // console.log(answer)
+        // console.log(answer);
+        
+        while (true) {
+          let guessValue = prompt ("UP and DOWN 게임을 시작합니다!");
+          
+          if (guessValue === 'q' || guessValue === '포기') {
+            alert("포기하셨습니다."); 
+            break; 
+          } else if (answer === parseInt(guessValue)) {
+            alert(`${answer}!! 정답입니다.`);
+            break;
+          } else if (answer < parseInt(guessValue)) {
+            alert("Down");
+          } else if (answer > parseInt(guessValue)) {
+            alert("Up");
+          }
 
+        }
+
+
+        
         
 
       
