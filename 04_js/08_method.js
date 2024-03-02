@@ -228,3 +228,6 @@ let mapArr = nums.map(function (n) {
 });
 
 console.log(mapArr); // [100, 200, 300, 400, 500]
+
+console.log(String(1));
+console.log(Number(1));
