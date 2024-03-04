@@ -97,7 +97,7 @@
       <li>Slack에 실행 영상을 참고해주세요!</li>
 
       <br /><br />
-      <button onclick="startGame();">게임 시작하기</button>
+      <button onclick="startGame2();">게임 시작하기</button>
     </ul>
     <br />
     <p>
@@ -124,6 +124,8 @@
     </p>
 
     <script>
+
+      // 내 답
       const answer = parseInt(Math.random() * (10 - 1) + 1);
       function startGame() {
         console.log('버튼을 클릭하셨군요! 게임을 시작합니다.');
@@ -147,13 +149,30 @@
           }
 
         }
+      }
+      // 강사님 답
+      function startGame2() {
+        console.log('버튼을 클릭하셨군요! 게임을 시작하겠습니다.');
 
+        let answer2 = Math.floor((Math.random() * 10) + 1) // 1 ~ 10 사이의 난수 생성
 
-        
-        
+        while (true) {
+          let guessValue2 = prompt('Up and Down 게임을 시작합니다!')
 
-      
-
+          if (guessValue2 === '그만' || guessValue2 === 'q') {
+            alert('게임을 포기하셨습니🫢')
+            break;
+          } else if (guessValue2 == answer2) {
+            alert(`${answer2}!! 정답입니다!🎉`)
+            break;
+          } else if (guessValue2 > answer2) {
+            alert('Down!');
+          } else if (guessValue2 < answer2) {
+            alert('Up!');
+          } else {
+            alert('1 ~ 10 사이의 숫자만 입력해주세요.');
+          }
+        } 
 
       }
 

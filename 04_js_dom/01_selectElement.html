@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>JS DOM - 요소 선택</title>
+        <!-- 
+            defer 속성
+                - 브라우저는 script 태그를 만나면 스크립트를 로딩하고 실행하기 위해서 html 문서 파싱을 중단 
+                - DOM이 구축되지 않은 상태에서 js DOM 조작할 경우 해당 요소가 없다는 에러 발생 가능성이 있음
+                - defer 속성을 사용시 html 문서 파싱을 막지 않고, 전체 문서 파싱이 끝난 후에 js를 실행 
+                - 맨아래(html태그 바로위에) script태그를 작성하는 것과 동일한 효과
+         -->
+        <script defer src="01_selectElement.js"></script>
+        <style>
+            div {
+                width: 100px;
+                height: 100px;
+                margin: 10px;
+                text-align: center;
+                line-height: 100px;
+            }
+
+            .pink {
+                background-color: pink;
+            }
+
+            #green {
+                background-color: green;
+            }
+
+            #gold {
+                background-color: gold;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="pink">1</div>
+        <div class="pink">2</div>
+        <div class="pink">3</div>
+        <div class="pink">4</div>
+        <div id="green" class="others"></div>
+        <div id="gold" class="others">금색</div>
+    </body>
+</html>
