@@ -19,9 +19,78 @@
 
         <label for="result">결과:</label>
         <input type="text" id="result" disabled />
+        <!--
+             disabled 속성 : 해당 input을 비활성화하여, 사용자가 클릭할 수 없도록 함 
+            위에서는 결과 값을 사용자가 임의로 변경하지 못하도록 하기 위해 추가 
+        -->
         <br />
         <br />
         <button id="sumbit">계산하기</button>
         <button id="reset">초기화</button>
+
+        <br />
+        <br />
+        <!-- 강사님 답 -->
+
+        <label for="pracValue1">값1:</label>
+        <input type="number" id="pracValue1" />
+        <br />
+        <label for="pracValue2">값2:</label>
+        <input type="number" id="pracValue2" />
+        <br />
+        <label for="pracOperator">연산자:</label>
+        <input type="text" id="pracOperator" />
+        <br />
+
+        <label for="pracResult">결과:</label>
+        <input type="number" id="pracResult" disabled="true" />
+        <!--
+             disabled 속성 : 해당 input을 비활성화하여, 사용자가 클릭할 수 없도록 함 
+            위에서는 결과 값을 사용자가 임의로 변경하지 못하도록 하기 위해 추가 
+        -->
+        <br />
+        <br />
+        <button type="button" id="calc">계산하기</button>
+        <button type="button" id="prac-reset" onclick="resetInput()">
+            초기화
+        </button>
     </body>
+
+    <script>
+        const calcBtn = document.querySelector('#calc');
+        calcBtn.addEventListener('click', () => {
+            calc();
+        });
+
+        function calc() {
+            const v1 = Number(document.querySelector('#pracValue1').value);
+            const v2 = Number(document.querySelector('#pracValue2').value);
+            const op = document.querySelector('#pracOperator').value;
+            let result;
+
+            if (op === '+') {
+                result = v1 + v2;
+            } else if (op === '-') {
+                result = v1 - v2;
+            } else if (op === '/') {
+                result = v1 / v2;
+            } else if (op === '*') {
+                result = v1 * v2;
+            } else {
+                result = '오류 발생';
+            }
+            document.querySelector('#pracResult').value = result;
+        }
+
+        // 함수는 괄호를 작성하지 않음(두번째로 읽는 함수는)
+        // 위의 동작 더 간단히 작성
+        //  calcBtn.addEventListener('click', clac)
+
+        function resetInput() {
+            document.querySelector('#pracValue1').value = '';
+            document.querySelector('#pracValue2').value = '';
+            document.querySelector('#pracOperator').value = '';
+            document.querySelector('#pracResult').value = '';
+        }
+    </script>
 </html>

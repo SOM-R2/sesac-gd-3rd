@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>API</title>
+        <script defer src="./01_api.js"></script>
+        <style>
+            ul {
+                width: 100vw;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            ul p {
+                width: 200px;
+            }
+
+            ul img {
+                margin: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="cat"></div>
+        <br />
+        <br />
+
+        <button onclick="getMovieData()">영화 받아오기</button>
+        <h3></h3>
+        <ul></ul>
+
+        <br />
+        <br />
+        <hr />
+
+        <button onclick="getPost()">게시글 조회</button>
+        <button onclick="postPost()">게시글 등록</button>
+        <button onclick="deletPost()">게시글 삭제</button>
+    </body>
+</html>

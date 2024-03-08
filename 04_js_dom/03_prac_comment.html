@@ -14,5 +14,35 @@
         <button id="submit">등록</button>
 
         <ul id="comment-list"></ul>
+
+        <br />
+        <br />
+        <!-- 강사님 답 -->
+        <form>
+            <label for="pracUserId">아이디</label>
+            <input type="text" id="pracUserId" />
+            <label for="pracComment">댓글</label>
+            <input type="text" id="pracComment" />
+            <button type="button" onclick="submitComment()">등록</button>
+        </form>
+        <br />
+
+        <ul id="commentContainer"></ul>
     </body>
+    <script>
+        function submitComment() {
+            const ul = document.getElementById('commentContainer');
+            const userId = document.getElementById('pracUserId').value;
+            const content = document.getElementById('pracComment').value;
+
+            const li = document.createElement('li');
+            li.innerText = `${userId} - ${content}`;
+            ul.append(li);
+
+            // input창 초기화
+
+            document.getElementById('pracUserId').value = '';
+            document.getElementById('pracComment').value = '';
+        }
+    </script>
 </html>
