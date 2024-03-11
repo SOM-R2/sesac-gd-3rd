@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Jquery</title>
+        <!-- jquery CDN (jQuery 3.x - minified)-->
+        <!-- 
+            https://code.jquery.com/
+                - uncompressed, minified : 일반 패키지
+                    - uncompressed : 압축되어있지 않고 공백과 들여쓰기가 되어있는 형태
+                    - minified : 압축되어있는 형태로, 한 줄로 와다다 쓰여있는 형태 (용량이 더 작음)
+                - slim, slim minified : slim 패키지 (일반 패키지에서 해당 버전에 불필요하다고 판단되는 몇 기능들이 제거된 형태)
+`         -->
+
+        <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"
+        ></script>
+        <script defer src="01_jquery.js"></script>
+        <style>
+            .container {
+                width: 100vw;
+                height: 400px;
+                background-color: antiquewhite;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .box {
+                width: 100px;
+                height: 100px;
+                border: 1px solid black;
+            }
+            .red {
+                background-color: red;
+            }
+
+            .yellow {
+                background-color: yellow;
+            }
+
+            .orange {
+                background-color: orange;
+            }
+            .text {
+                color: aqua;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="testSelector">jquery 선택자</div>
+        <!-- jquery는 아래 똑같은 요소를 한번에 가져옴 -->
+        <!-- <div class="testSelector">jquery 선택자</div>
+        <div class="testSelector">jquery 선택자</div>
+        <div class="testSelector">jquery 선택자</div> -->
+
+        <input type="text" />
+        <button onclick="useVal()">val() 사용하기</button>
+        <button onclick="useAttr()">attr() 사용하기</button>
+        <br />
+
+        <span id="span"
+            >hello
+            <p>world</p></span
+        >
+        <button onclick="useText()">text() 사용하기</button>
+        <button onclick="useHtml()">html() 사용하기</button>
+        <button onclick="useCss()">css() 사용하기</button>
+        <br />
+
+        <div class="container">
+            <div class="box red" id="red"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box red"></div>
+        </div>
+
+        <button onclick="useAppend()">요소 추가하기</button>
+        <button onclick="useRemove()">요소 삭제하기</button>
+        <button onclick="useParent()">parent로 요소 탐색하기</button>
+        <br />
+
+        <div class="box text" id="controllClass">클래스 조작</div>
+        <button onclick="controllClass()">클래스 조작하기</button>
+    </body>
+</html>
