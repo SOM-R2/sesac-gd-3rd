@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    height: 20vh;
+    width: 50%;
+    position: absolute;
+}
+.container {
+    display: flex;
+    height: 20vh;
+}
+
+.scroll-section {
+    width: 100vw;
+    height: 2319;
+    background-color: #000;
+}
+
+.path {
+    stroke: #858585;
+    stroke-width: 2.5px;
+}
+article {
+    width: 50vw;
+}
+footer {
+    height: 860px;
+}
