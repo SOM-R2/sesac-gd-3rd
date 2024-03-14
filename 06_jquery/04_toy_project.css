@@ -24,9 +24,13 @@ img {
     stroke: #858585;
     stroke-width: 2.5px;
 }
+
+svg {
+    width: 50%;
+}
 article {
-    width: 50vw;
+    width: 50%;
 }
 footer {
-    height: 860px;
+    height: 30vh;
 }
