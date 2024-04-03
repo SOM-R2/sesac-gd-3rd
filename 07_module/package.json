@@ -1,0 +1,17 @@
+{
+    "type": "module",
+    "comment": "commonjs 모듈 사용할 때는 type: commonjs 사용",
+    "comment2": "ES6 모듈 사용할 때는 type: module 사용",
+    "comment3": "comment key 들은 json 파일에 주석을 달지 못하는데 설명이 필요해서 작성한 것임 (따라서 패키지 작성 프로젝트에서 작성할떄는 comment 부분 3줄은 작성하지 않음) ",
+    "comment4": "이렇게 여기서 type을 모듈로 지정해 놓고 사용하면 각자 html에서 import를 불러와서 사용할때 scrpt에 type=module 작성하지 않아도됨 ",
+    "comment5": "보통은 아래처럼 터미널에서 npm init 명령어를 통해 자동생성함 (따로 위에처럼 내가 지정해서 만들지 않음)",
+    "name": "07_module",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "description": ""
+}
