@@ -1,9 +1,15 @@
-import FuncProps from './components/FuncProps.jsx';
-import ClassProps from './components/ClassProps.jsx';
+// import FuncProps from './components/FuncProps.jsx';
+// import ClassProps from './components/ClassProps.jsx';
+// import './App.css';
+// import ProductList from './components/ProductItem.jsx';
+
+// import FoodProps from './components/FoodProps.jsx';
+// import BookProps from './components/BookProps.jsx';
+import FuncProps from './components/FuncProps';
+import ClassProps from './components/ClassProps';
 import './App.css';
-import FoodProps from './components/FoodProps.jsx';
-import BookProps from './components/BookProps.jsx';
-import ProductList from './components/ProductList.jsx';
+import ProductItem from './components/ProductItem';
+import ProductContainer from './components/ProductContainer';
 
 function App() {
     // const sayHi = () => {
@@ -119,8 +125,11 @@ function App() {
 
             {/* -------- 연습 ---------- */}
             {products.map((prod) => (
-                <ProductList prodData={prod} key={prod.id} />
+                <ProductItem prodData={prod} key={prod.id} />
             ))}
+
+            {/* 연습 develop */}
+            <ProductContainer products={products} />
         </div>
     );
 }
