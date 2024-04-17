@@ -5,10 +5,10 @@ import { useState } from 'react';
 // 이 토글 기능은 결국 동일한 로직으로 이루어져 있음
 // 해당 로직을 반복할 필요 없이 커스텀 훅으로 만들어 사용하면 편리
 export default function useToggle(initialValue = false) {
-    const [value, setValue] = useState(initialValue);
+  const [value, setValue] = useState(initialValue);
 
-    const toggleValue = () => setValue(!value);
+  const toggleValue = () => setValue(!value);
 
-    // return 값은 state인 value와 해당 state를 반전시키는 toggleValue 함수
-    return [value, toggleValue];
+  // return 값은 state인 value와 해당 state를 반전시키는 toggleValue 함수
+  return [value, toggleValue];
 }
