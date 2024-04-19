@@ -1,0 +1,26 @@
+div {
+    border: 1px solid black;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: cornflowerblue;
+}
+
+.container {
+    background-color: aliceblue;
+}
+
+.item {
+    /* 텍스트도 flex로 가운데 정렬 가능 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* text-align: center; 와 동일 */
+    color: rebeccapurple;
+}
+
+.item1 {
+    font-weight: bold;
+}

@@ -1,0 +1,12 @@
+.container {
+    border: 5px solid salmon;
+    margin-top: 20px;
+}
+
+.first {
+    background-color: lightgrey;
+}
+
+.second {
+    font-size: 2rem;
+}
