@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin-top: 2vh;
+    padding: 0 20vw;
+}
+
+.todo-container {
+    background-color: antiquewhite;
+    width: 200px;
+}
